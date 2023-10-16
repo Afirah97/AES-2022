@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+
+        });
+
+        function initForm(){
+                
+            var arr_F360001_2 = ['#c-F360001','#c-F360002','#c-F360003','#c-F360004','#c-F360005','#c-F360006','#c-F360007','#c-F360008','#c-F360009','#c-F360010'];
+            chkDisableT("#r-F360001_2", "#r-F360001_1", arr_F360001_2);
+            $( "#r-F350001_1" ).click( function() { 
+                chkDisableT("#r-F360001_2", "#r-F360001_1", arr_F360001_2);
+            });
+            $( "#r-F360001_2" ).click( function() { 
+                chkDisableT("#r-F360001_2", "#r-F360001_1", arr_F360001_2);
+            });
+
+            
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="card">
+
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button"
+                            class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round">
+                            <div class="font-size-lg font-weight-bold">D</div>
+                        </button></td>
+                    <td>
+                        <h6 class="text-teal-800">PEMASARAN DAN PROMOSI
+                            <br><span class="text-teal-400 font-size-sm">MARKETING AND PROMOTION</span></h6>
+                    </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">Seksyen<br><span class="text-muted">Section</span></th>
+                        <th>Keterangan<br><span class="text-muted">Description</span></th>
+                        <th style="width: 10%;">No Medan<br><span class="text-muted">Field No</span></th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="text-center" rowspan="10">
+                            <h6 class="mb-0">D.1</h6>
+                        </td>
+                        <td rowspan="10">
+                            <div class="font-weight-semibold">Adakah pertubuhan ini menggunakan media pemasaran untuk mempromosikan perniagaan? Sila nyatakan medium yang digunakan (Boleh pilih lebih daripada satu)</div>
+                            <span class="text-muted">Did this establishment use any marketing media to promote it business? Please indicate the medium used (May choose more than one)</span><br><br>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360001">360001</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (a) Ejen pemasaran
+                                        <br/><span class="text-muted">Marketing agent</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360001" name="F360001" value="1" {{#eq answers.F360001 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360002">360002</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) Iklan (suratkhabar, TV dan majalah)
+                                        <br/><span class="text-muted">Advertisement (newspaper, TV and magazines)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360002" name="F360002" value="1" {{#eq answers.F360002 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360003">360003</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) Risalah, katalog dsb.
+                                        <br/><span class="text-muted">Flyers, catalogues etc.</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360003" name="F360003" value="1" {{#eq answers.F350103 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360004">360004</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) Ekspo dan pameran tempatan
+                                        <br/><span class="text-muted">Local exposition and exhibition</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360004" name="F360004" value="1" {{#eq answers.F360004 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360005">360005</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) Ekspo dan pameran antarabangsa
+                                        <br/><span class="text-muted">Overseas exposition and exhibition</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360005" name="F360005" value="1" {{#eq answers.F360005 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360006">360006</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) Kenyataan akhbar secara dalam talian
+                                        <br/><span class="text-muted">Online media statement</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360006" name="F360006" value="1" {{#eq answers.F360006 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360007">360007</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Enjin carian optimum (cth. Google, Yahoo dsb.)
+                                        <br/><span class="text-muted">Search engine optimisation (e.g., Google, Yahoo etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360007" name="F360007" value="1" {{#eq answers.F360007 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360008">360008</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (h) Rangkaian laman web sosial (cth. Blog, Twitter, Facebook dsb.)
+                                        <br/><span class="text-muted">Social networking website (e.g. Blogs, Twitter, Facebook etc.)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360008" name="F360008" value="1" {{#eq answers.F360008 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360009">360009</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (i) Penajaan acara
+                                        <br/><span class="text-muted">Event sponsorship</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360009" name="F360009" value="1" {{#eq answers.F360009 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-360010">360010</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (j) Tidak berkenaan
+                                        <br/><span class="text-muted">Not applicable</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F360010" name="F360010" value="1" {{#eq answers.F360010 '1'}}checked{{/eq}}></span>
+
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

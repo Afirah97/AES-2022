@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+
+        function initForm(){
+
+            var trig_F010012 = "#c-F010012";
+            var arr_F010012 = ['#tx-F010013'];
+            chkDisableFRequiredT(trig_F010012, arr_F010012, arr_F010012);
+            $( trig_F010012 ).click( function() {
+                chkDisableFRequiredT(trig_F010012, arr_F010012, arr_F010012);
+            });
+
+            var arr_F010036_2 = ['#s-F011830','#c-F010037','#c-F010038','#c-F010039'];
+            chkDisableT("#r-F010036_2", "#r-F010036_1", arr_F010036_2);
+            $( "#r-F010036_1" ).click( function() {
+                chkDisableT("#r-F010036_2", "#r-F010036_1", arr_F010036_2);
+            });
+            $( "#r-F010036_2" ).click( function() {
+                chkDisableT("#r-F010036_2", "#r-F010036_1", arr_F010036_2);
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">13</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> PINJAMAN / PEMBIAYAAN, DEPOSIT DAN TANGGUNGAN SEPERTI PADA 31 DISEMBER 2021
+                        <br/><span class="text-teal-400 font-size-sm">LOANS / FINANCING, DEPOSIT AND LIABILITIES AS AT 31 DECEMBER 2021</span></h6>
+                       
+                        
+                        
+                    </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+               
+            
+                <tbody>
+                     <!--<tr>
+                        <td>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">Nota /</span> Notes:
+							    <br/>
+							    <br/> <span class="font-weight-semibold">TIDAK BERKENAAN /</span>  NOT APPLICABLE
+							    <br/> <span class="font-weight-semibold">Sila teruskan ke Soalan 14 /</span>  Please proceed to Question 14
+							    <br/> 
+						    </div>
+                        </td>
+                </tr>-->
+                
+                
+                    <tr>
+                        <td class="text-center" rowspan = "2">
+                            <h6 class="mb-0">13.1</h6>
+                        </td>
+                        
+                        <td rowspan = "2">
+                            <div class="font-weight-semibold">Jumlah pinjaman / pembiayaan</div>
+                            <span class="text-muted">Total loans / financing</span><br><br>
+                            
+                           
+                        </td>
+                	
+                		<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-137701">137701</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tahun Semasa</div>
+                            <span class="text-muted">Current Year</span><br>
+                            
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                			    <input class="form-control only-number-neg" type="text" id="t-F137701" name="F137701" value="{{answers.F137701}}" maxlength="12">
+                			        <div class="form-control-feedback form-control-feedback-lg">
+                				        RM
+                				    </div>
+                			</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-137702">137702</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tahun Sebelum</div>
+                            <span class="text-muted">Previous Year</span><br>
+                            
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                				<input class="form-control only-number-neg" type="text" id="t-F137702" name="F137702" value="{{answers.F137702}}" maxlength="12">
+                				<div class="form-control-feedback form-control-feedback-lg">
+                						RM
+                				</div>
+                			</div>
+                			
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" rowspan = "2">
+                            <h6 class="mb-0">13.2</h6>
+                        </td>
+                        
+                        <td rowspan = "2">
+                            <div class="font-weight-semibold">Jumlah deposit yang diterima</div>
+                            <span class="text-muted">Total deposit accepted</span><br><br>
+                            
+                            
+                        </td>
+                	
+                		<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-137703">137703</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tahun Semasa</div>
+                            <span class="text-muted">Current Year</span><br>
+                            
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                			    <input class="form-control only-number-neg" type="text" id="t-F137703" name="F137703" value="{{answers.F137703}}" maxlength="12">
+                			        <div class="form-control-feedback form-control-feedback-lg">
+                				        RM
+                				    </div>
+                			</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-137704">137704</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tahun Sebelum</div>
+                            <span class="text-muted">Previous Year</span><br>
+                            
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                				<input class="form-control only-number-neg" type="text" id="t-F137704" name="F137704" value="{{answers.F137704}}" maxlength="12">
+                				<div class="form-control-feedback form-control-feedback-lg">
+                						RM
+                				</div>
+                			</div>
+                			
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" rowspan = "2">
+                            <h6 class="mb-0">13.3</h6>
+                        </td>
+                        
+                        <td rowspan = "2">
+                            <div class="font-weight-semibold">Aktuari</div>
+                            <span class="text-muted">Actuarial</span><br><br>
+                            
+                            
+                        </td>
+                	
+                		<td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-137705">137705</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tahun Semasa</div>
+                            <span class="text-muted">Current Year</span><br>
+                            
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                			    <input class="form-control only-number-neg" type="text" id="t-F137705" name="F137705" value="{{answers.F137705}}" maxlength="12">
+                			        <div class="form-control-feedback form-control-feedback-lg">
+                				        RM
+                				    </div>
+                			</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-137706">137706</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tahun Sebelum</div>
+                            <span class="text-muted">Previous Year</span><br>
+                            
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                				<input class="form-control only-number-neg" type="text" id="t-F137706" name="F137706" value="{{answers.F137706}}" maxlength="12">
+                				<div class="form-control-feedback form-control-feedback-lg">
+                						RM
+                				</div>
+                			</div>
+                			
+                        </td>
+                    </tr>
+                   
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

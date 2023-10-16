@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+
+        function initForm(){01003
+            
+            var arr_F030001 = ['F010031','F010032'];
+            calPercentage( arr_F030001, 'F030001' );
+            $( "#t-F010031" ).blur( function() { calPercentage( arr_F030001, 'F030001' ); });
+            $( "#t-F010032" ).blur( function() { calPercentage( arr_F030001, 'F030001' ); });
+            
+
+            var trig_F010012 = "#c-F010012";
+            var arr_F010012 = ['#tx-F010013'];
+            chkDisableFRequiredT(trig_F010012, arr_F010012, arr_F010012);
+            $( trig_F010012 ).click( function() {
+                chkDisableFRequiredT(trig_F010012, arr_F010012, arr_F010012);
+            });
+
+            var arr_F010027_2 = ['#s-F011830','#c-F010037','#c-F010038','#c-F010039'];
+            chkDisableT("#r-F010027_2", "#r-F010027_1", arr_F010027_2);
+            $( "#r-F010027_1" ).click( function() {
+                chkDisableT("#r-F010027_2", "#r-F010027_1", arr_F010027_2);
+            });
+            $( "#r-F010027_2" ).click( function() {
+                chkDisableT("#r-F010027_2", "#r-F010027_1", arr_F010027_2);
+            });
+
+        }
+        
+         // Hideoffice
+        //   $(".office_use").hide(); 
+        
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">1</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> MAKLUMAT PENGENALAN
+                        <br/><span class="text-teal-400 font-size-sm">IDENTIFICATION PARTICULARS</span></h6>
+                       <!--<td style="width:100px">
+                        <div class="text-default font-weight-semibold text-center">
+                                <a class="ancor" id="a-120101">NG</a>
+                            </div>
+                        <div>
+								<input class="form-control" type="text" id="a-120201" name="A120201" value="{{answers.A120201}}" maxlength="2">
+							</div></td>
+							<td style="width:150px">
+							    <div class="text-default font-weight-semibold text-center">
+                                <a class="ancor" id="a-120101">NO. BATCH</a>
+                            </div>
+							    <div>
+								<input class="form-control only-number-pos" type="text" id="a-120201" name="A120201" value="{{answers.A120201}}" maxlength="4">
+							</div></td>
+							<td style="width:100px">
+							    <div class="text-default font-weight-semibold text-center">
+                                <a class="ancor" id="a-120101">BIL</a>
+                            </div>
+							    <div>
+								<input class="form-control only-number-pos" type="text" id="a-120201" name="A120201" value="{{answers.A120201}}" maxlength="2">
+							</td>-->
+                    </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 2%;">No</th>
+                        <th> Keterangan</th>
+                        <th style="width: 10%;">No Medan</th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="office_use">
+                        <td colspan="2" rowspan="2">
+                        </td>
+                        <td colspan="2">
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="office_use">
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010051">010051</a>
+                                <button type="button" class="btn btn-outline bg-danger-400-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="010051" style="float:right;" title="Reset">
+                                    <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">309 &ensp;Aktiviti Kewangan</div>
+                                        <span class="text-muted">Financial Activities </span>
+                                    <input type="radio" class="form-check-input-styled 010051" id="r-F010051_1" name="F010051" value="1" {{#eq answers.F010051 '1'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">820 &ensp;Perbankan, Insurans / Takaful, Pajakan Kewangan & Pemfaktoran</div>
+                                        <span class="text-muted">Banking, Insurance / Takaful, Financial Leasing & Factoring</span>
+                                    <input type="radio" class="form-check-input-styled 010051" id="r-F010051_2" name="F010051" value="2" {{#eq answers.F010051 '2'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                           
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td rowspan="2">
+                            <h6 class="mb-0">1.1</h6>
+                        </td>
+                        <td rowspan="2">
+                            <div class="font-weight-semibold">Nombor Pendaftaran Syarikat / Perniagaan (SSM) atau lain-lain (sila nyatakan)</div>
+                            <span class="text-muted">Registration Number of Company/ Business (CCM) or others (please specify)</span>
+                          <br>  <!--<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010002">010002</a>
+                            </div>-->
+                          <!--  <br><input class="form-control" type="text" id="t-F010002" name="F010002" value="{{answers.F010002}}" maxlength="25" required>
+                        </td>-->
+                         
+                       <!-- </tr> 
+                        <tr class="office_use"> -->
+                        <td colspan="2" class="office_use">
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                        </td>
+                        </tr>
+                        <tr>
+                     
+                        <td class="noborder-top" colspan="0">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010002">010002</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+                            <input class="form-control" type="text" id="t-F010002" name="F010002" value="{{answers.F010002}}" maxlength="20" required>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            <h6 class="mb-0">1.2</h6>
+                        </td>
+                        <td rowspan="2">
+                            <div class="font-weight-semibold">
+                                Sila tanda (X) bagi jenis pertubuhan ini dalam satu kotak sahaja
+                                <br/><span class="text-muted">Please mark (X) for this type of establishment in one box only</span>
+                            </div>
+                            <br/><br/>
+                             
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">Nota /</span> Notes:
+							    <br/> <span class="font-weight-semibold">Sekiranya jawapan ialah (2), sila lengkapkan Soalan 12 di muka surat 28</span>
+							    <br/> If the answer is (2), please complete Question 12 on page 28 
+						    </div>
+                        </td>
+                       <!-- </tr>
+                        <tr class="office_use"> -->
+                        <td colspan="2" class="office_use">
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                        </td>
+                        </tr>
+                <tr>
+                     <td>
+                        <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-010040">010040</a> <span class="text-danger">*</span>
+                            <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="010040" style="float:right;" title="Reset">
+                            <i class="icon-undo"></i>
+                            </button>-->
+                        </div>
+                    </td>
+                    
+                    
+                    <td>
+                        <table class="table-radio">
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                    <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 Bebas</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Independent</span>
+                                    <input type="radio" class="form-check-input-styled 010040" id="r-F010040_1" name="F010040" value="1" {{#eq answers.F010040 '1'}}checked{{/eq}} required>
+                                    </label>
+                                    </div>
+                                </td>
+                                    <td><div class="font-weight-semibold text-info-800"></div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                    <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 Ibu Pejabat</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Headquarters</span>
+                                    <input type="radio" class="form-check-input-styled 010040" id="r-F010040_2" name="F010040" value="2" {{#eq answers.F010040 '2'}}checked{{/eq}} required>
+                                    </label>
+                                    </div>
+                                </td>
+                                    <td><div class="font-weight-semibold text-info-800"></div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                    <label class="form-check-label">
+                                    <div class="font-weight-semibold">3 Cawangan / Pejabat Operasi</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Branch / Operations Office</span>
+                                    <input type="radio" class="form-check-input-styled 010040" id="r-F010040_3" name="F010040" value="3" {{#eq answers.F010040 '3'}}checked{{/eq}} required>
+                                    </label>
+                                    </div>
+                                </td>
+                                    <td><div class="font-weight-semibold text-info-800"></div></td>
+                            </tr>
+                    </table>
+                </td>
+            </tr>
+                 <tr>
+                        <td>
+                            <h6 class="mb-0">1.3</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tahun mula perniagaan sekarang</div>
+                            <span class="text-muted">Commencement year of present business</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010003">010003</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            {{select years id="s-F010003" name="F010003" class="form-control select-search" selected=answers.F010003 required="required"}}
+                            <!--{{select years id="s-F011830" name="F011830" class="form-control select-search" selected=answers.F011830}}-->
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td   rowspan="11">
+                            <h6 class="mb-0">1.4</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Data dalam pelaporan ini meliputi tempoh operasi</div>
+                            <span class="text-muted">Data in this return covers the operational period</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top" align="center">
+                            <div class="font-weight-semibold">Dari</div>
+                            <span class="text-muted">From</span>
+                        </td>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010004">010004</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+                        	<div class="input-group" title="DDMMYYYY">
+                        		<input class="form-control daterange-single" type="text" id="t-F010004" name="F010004" value="{{answers.F010004}}" maxlength="8" placeholder="DDMMYYYY" required>
+                        		<span class="input-group-append">
+                        			<span class="input-group-text"><i class="icon-calendar22"></i></span>
+                        		</span>
+                        	</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top" align="center">
+                            <div class="font-weight-semibold">Hingga</div>
+                            <span class="text-muted">To</span>
+                        </td>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010005">010005</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+                        	<div class="input-group" title="DDMMYYYY">
+                        		<input class="form-control daterange-single" type="text" id="t-F010005" name="F010005" value="{{answers.F010005}}" maxlength="8" placeholder="DDMMYYYY" required>
+                        		<span class="input-group-append">
+                        			<span class="input-group-text"><i class="icon-calendar22"></i></span>
+                        		</span>
+                        	</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="8" class="noborder-top v-top">
+                            <div class="p-custom-2 font-weight-semibold">
+                                1.4.1 Jika tempoh masa laporan tidak meliputi seluruh tahun atau pertubuhan ini tidak beroperasi, sila tandakan (X) sebab-sebab di bawah (Boleh pilih lebih daripada satu)
+                                <br/><span class="text-muted">If the reporting period does not cover a full year or this establishment not in operation, please mark (X) the reason(s) below (May choose more than one)</span>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010006">010006</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (a) Operasi bermusim
+                                        <br/><span class="text-muted">Seasonal operations</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F010006" name="F010006" value="1" {{#eq answers.F010006 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010007">010007</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (b) Perniagaan baharu
+                                        <br/><span class="text-muted">New business</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F010007" name="F010007" value="1" {{#eq answers.F010007 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010008">010008</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (c) Pertukaran hak milik
+                                        <br/><span class="text-muted">Change of ownership</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F010008" name="F010008" value="1" {{#eq answers.F010008 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010009">010009</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (d) Perubahan tahun fiskal
+                                        <br/><span class="text-muted">Change of fiscal year</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F010009" name="F010009" value="1" {{#eq answers.F010009 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010010">010010</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (e) Operasi diberhentikan
+                                        <br/><span class="text-muted">Ceased operations</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F010010" name="F010010" value="1" {{#eq answers.F010010 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010011">010011</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (f) Tidak aktif untuk sementara
+                                        <br/><span class="text-muted">Temporarily inactive</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F010011" name="F010011" value="1" {{#eq answers.F010011 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010012">010012</a>
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    (g) Lain-lain (sila nyatakan)
+                                        <br/><span class="text-muted">Others (please specify)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F010012" name="F010012" value="1" {{#eq answers.F010012 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+							</td>
+						<tr>
+						    <td>
+						        <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010013">010013</a>
+                            </div>
+						    </td>
+						    <td>
+						        <textarea rows="3" class="form-control" id="tx-F010013" name="F010013" maxlength="250" >{{answers.F010013}}</textarea>
+						    </td>
+						    
+						</tr>
+							
+                    
+                    <tr>
+                        <td>
+                            <h6 class="mb-0">1.5</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila nyatakan alamat laman web pertubuhan ini sekiranya ada</div>
+                            <span class="text-muted">Please specify the address of this establishment’s website if applicable</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010053">010053</a>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea rows="5" class="form-control" id="tx-F010053" name="F010053" maxlength="250">{{answers.F010053}}</textarea>
+
+                        </td>
+                    </tr>
+                    
+                 
+                    <tr>
+                        <td rowspan="2">
+                            <h6 class="mb-0">1.6</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila nyatakan alamat tempat perniagaan sekiranya ia tidak sama dengan alamat pos di muka hadapan</div>
+                            <span class="text-muted">Please specify the address of your business operation if it differs from the postal address as stated on the front page</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010014">010014</a>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea rows="5" class="form-control" id="tx-F010014" name="F010014" maxlength="250">{{answers.F010014}}</textarea>
+
+                        </td> 
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center">
+                            <div class="font-weight-semibold">Poskod</div>
+                            <span class="text-muted">Postcode</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010015">010015</a>
+                            </div>
+                            
+                        </td>
+                        <td>
+                            {{select poskodList id="s-F010015" name="F010015" class="form-control select-search" selected=answers.F010015}}
+                            
+                            <!--<input class="form-control only-number-pos" type="text" id="t-F010015" name="F010015" value="{{answers.F010015}}" maxlength="5">-->
+                        </td>
+                    </tr>
+                    
+                    
+                       
+                            
+                    <tr class="office_use">
+                        <td colspan="4">
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600 mb-1">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+			                <table class="table table-bordered alpha-grey text-info-800">
+                                <thead class="alpha-info">
+                                    <tr>
+                                        <th></th>
+                                        <th>Negeri<br/><span class="text-muted">State</span></th>
+                                        <th>Daerah Pentadbiran<br/><span class="text-muted">Administrative District</span></th>
+                                        <th>Daerah Banci<br/><span class="text-muted">Census District</span></th>
+                                        <th>No. BP<br/><span class="text-muted">EB No.</span></th>
+                                        <th>Strata<br/><span class="text-muted">Strata</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Kod alamat tempat perniagaan<br/><span class="text-muted">Address code of bussiness operation</span></td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010017">010017</a> <span class="text-danger">*</span>
+                                            </div>
+                                            {{select table="view_appendix_4" id="s-F010017" childIds="s-F010018,s-F010018A" name="F010017" class="form-control suf-parent child-s-F010018 child-s-F010018A" selected=answers.F010017 required="required"}}
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010018">010018</a> <span class="text-danger">*</span>
+                                            </div>
+                                            {{select table="view_appendix_5" id="s-F010018" name="F010018" parent="state_code" parentId="s-F010017" class="form-control" selected=answers.F010018 required="required"}}
+        
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010019">010019</a> <span class="text-danger">*</span>
+                                            </div>
+                                            <input class="form-control" type="text" id="t-F010019" name="F010019" value="{{answers.F010019}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010020">010020</a> <span class="text-danger">*</span>
+                                            </div>
+                                            <input class="form-control" type="text" id="t-F010020" name="F010020" value="{{answers.F010020}}" maxlength="6">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010021">010021</a> <span class="text-danger">*</span>
+                                            </div>
+                                            <input class="form-control" type="text" id="t-F010021" name="F010021" value="{{answers.F010021}}" maxlength="1">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kod alamat pos<br/><span class="text-muted">Postal address code</span></td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010022">010022</a> <span class="text-danger">*</span>
+                                            </div>
+                                            <!--<input class="form-control" type="text" id="t-F010022" name="F010022" value="{{answers.F010022}}" maxlength="2" required>-->
+                                            {{select table="view_appendix_4" id="s-F010022" childIds="s-F010023,s-F010023A" name="F010022" class="form-control suf-parent child-s-F010023 child-s-F010023A" selected=answers.F010022 required="required"}}
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010023">010023</a> <span class="text-danger">*</span>
+                                            </div>
+                                            <!--<input class="form-control" type="text" id="t-F010023" name="F010023" value="{{answers.F010023}}" maxlength="2" required>-->
+                                             {{select table="view_appendix_5" id="s-F010023" name="F010023" parent="state_code" parentId="s-F010022" class="form-control" selected=answers.F010023 required="required"}}
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010024">010024</a> <span class="text-danger">*</span>
+                                            </div>
+                                            <input class="form-control" type="text" id="t-F010024" name="F010024" value="{{answers.F010024}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010025">010025</a> <span class="text-danger">*</span>
+                                            </div>
+                                            <input class="form-control" type="text" id="t-F010025" name="F010025" value="{{answers.F010025}}" maxlength="6">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-010026">010026</a> <span class="text-danger">*</span>
+                                            </div>
+                                            <input class="form-control" type="text" id="t-F010026" name="F010026" value="{{answers.F010026}}" maxlength="1">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>
+                            <h6 class="mb-0">1.7</h6>
+                        </td>
+                         <td colspan="1">
+                            <div class="font-weight-semibold">Adakah data yang dilaporkan di dalam pelaporan ini hanya berkaitan dengan pertubuhan ini di mana lokasinya adalah sama seperti alamat yang diberikan di dalam Soalan 1.6?</div>
+                            <span class="text-muted">Did the data reported in this return related only to this establishment where the location is the same as the address given in Question 1.6?</span>
+                            <br/><br/>
+                             <div class="font-weight-semibold">Sila tanda (X) dalam satu kotak sahaja</div>
+                            <span class="text-muted">Please mark (X) in one box only</span>
+                            <br/><br/>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010016">010016</a> <span class="text-danger">*</span>
+                                <!--<button type="button"
+                                 class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset"
+                                data-val="010016" style="float:right;" title="Reset">
+                               <i class="icon-undo"></i>
+                              </button>-->
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes</span>
+                                    <input type="radio" class="form-check-input-styled 010016" id="r-F010016_1" name="F010016" value="1" {{#eq answers.F010016 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</span>
+                                    <input type="radio" class="form-check-input-styled 010016" id="r-F010016_2" name="F010016" value="2" {{#eq answers.F010016 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                
+
+                    <tr>
+                       <td rowspan="4">
+                            <h6 class="mb-0">1.8</h6>
+                        </td>
+                        <td rowspan="4">
+                            <div class="font-weight-semibold">Sila nyatakan aktiviti utama pertubuhan ini, tanda (X) dalam satu kotak sahaja</div>
+                            <span class="text-muted">Please specify the principal activity of this establishment, mark (X) in one box only</span>
+                
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                        
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010027">010027</a> <span class="text-danger">*</span>
+                                <!--<button type="button"
+                                 class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset"
+                                data-val="010027" style="float:right;" title="Reset">
+                               <i class="icon-undo"></i>
+                              </button>-->
+                            <br/><br/>
+                            </div>
+                        </td>
+                        <td>
+                            <table class="table-radio")
+                            <tr>
+                                 <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-64110">64110</a>
+                            </div>
+                        </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                    <label class="form-check-label">
+                                        <div class="font-weight-semibold">Perbankan pusat</div>
+                                        <span class="text-muted">Central Banking</span>
+                                        <input type="radio" class="form-check-input-styled 010027" id="r-F010027_1" name="F010027" value="64110" {{#eq answers.F6010027 '1'}}checked{{/eq}} required>
+                                     </label>
+                                     </div>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64191">64191</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                        <label class="form-check-label">
+                                            <div class="font-weight-semibold">Bank perdagangan</div>
+                                            <span class="text-muted">Commercial banks</span>
+                                            <input type="radio" class="form-check-input-styled 010027" id="r-F010027_2" name="F010027" value="64191" {{#eq answers.F010027 '2'}}checked{{/eq}} required>
+                                    </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64192">64192</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                        <label class="form-check-label">
+                                            <div class="font-weight-semibold">Bank Islam</div>
+                                            <span class="text-muted">Islamic banks</span>
+                                            <input type="radio" class="form-check-input-styled 010027" id="r-F010027_3" name="F010027" value="64192" {{#eq answers.F010027 '3'}}checked{{/eq}} required>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64193">64193</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                        <label class="form-check-label">
+                                            <div class="font-weight-semibold">Bank luar pesisir pantai</div>
+                                            <span class="text-muted">Offshore banks</span>
+                                            <input type="radio" class="form-check-input-styled 010027" id="r-F010027_4" name="F010027" value="64193" {{#eq answers.F010027 '4'}}checked{{/eq}} required>
+                                         </label>
+                                    </div>
+                                </td>
+                            </tr>
+                           <tr>
+                               <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64194">64194</a>
+                                    </div>
+                                </td>
+                               <td>
+                                   <div class="form-check form-check-right">
+                                        <label class="form-check-label">
+                                            <div class="font-weight-semibold">Bank pelaburan</div>
+                                            <span class="text-muted">Investment banks</span>
+                                            <input type="radio" class="form-check-input-styled 010027" id="r-F010027_5" name="F010027" value="64194" {{#eq answers.F010027 '5'}}checked{{/eq}} required>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                           <tr>
+                               <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64195">64195</a>
+                                    </div>
+                                </td>
+                               <td>
+                                    <div class="form-check form-check-right">
+                                        <label class="form-check-label">
+                                            <div class="font-weight-semibold">Institusi pembangunan kewangan (dengan fungsi pengambilan deposit)</div>
+                                            <span class="text-muted">Development financial instituitions (with deposits taking functions)</span>
+                                            <input type="radio" class="form-check-input-styled 010027" id="r-F010027_6" name="F010027" value="64195" {{#eq answers.F010027 '6'}}checked{{/eq}} required>
+                                        </label>
+                                    </div>
+                               </td>
+                           </tr>
+                            <tr>
+                                <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64200">64200</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                        <label class="form-check-label">
+                                            <div class="font-weight-semibold">Aktiviti syarikat pemegang</div>
+                                            <span class="text-muted">Activities of holding companies</span>
+                                            <input type="radio" class="form-check-input-styled 010027" id="r-F010027_7" name="F010027" value="64200" {{#eq answers.F010027 '7'}}checked{{/eq}} required>
+                                         </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64301">64301</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Syarikat modal usahasama</div>
+                                    <span class="text-muted">Venture capital companies</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_8" name="F010027" value="64301" {{#eq answers.F010027 '8'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64303">64303</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Harta unit amanah (REITs)</div>
+                                    <span class="text-muted">Property unit trust (REITs)</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_9" name="F010027" value="64303" {{#eq answers.F010027 '9'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64304">64304</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Pengurusan akaun amanah lain</div>
+                                    <span class="text-muted">Other administration of trusts accounts</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_10" name="F010027" value="64304" {{#eq answers.F010027 '10'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64309">64309</a>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Entiti amanah, tabung dan kewangan seumpamanya t.t.t.l.</div>
+                                    <span class="text-muted">Trusts, funds and similar financial entities n.e.c</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_11" name="F010027" value="64309" {{#eq answers.F010027 '11'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64910">64910</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Aktiviti pajakan kewangan</div>
+                                    <span class="text-muted">Financial leasing activities</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_12" name="F010027" value="64910" {{#eq answers.F010027 '12'}}checked{{/eq}} required>
+                                          </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64921">64921</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Institusi pembangunan kewangan (tanpa fungsi pengambilan deposit)</div>
+                                    <span class="text-muted">Development financial instituitions (without deposits taking functions)</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_13" name="F010027" value="64921" {{#eq answers.F010027 '13'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64922">64922</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Perkhidmatan kad kredit</div>
+                                    <span class="text-muted">Credit card services</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_14" name="F010027" value="64922" {{#eq answers.F010027 '14'}}checked{{/eq}} required>
+                                          </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64923">64923</a>
+                                    </div>
+                                </td>
+                                <td>
+                             <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Aktiviti peminjaman wang berlesen</div>
+                                    <span class="text-muted">Licensed money lending activities</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_15" name="F010027" value="64923" {{#eq answers.F010027 '15'}}checked{{/eq}} required>
+                                          </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64924">64924</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Kedai pajak gadai dan tukang pajak termasuk Ar-Rahnu</div>
+                                    <span class="text-muted">Pawnshop and pawnbrokers includes Ar-Rahnu</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_16" name="F010027" value="64924" {{#eq answers.F010027 '16'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64925">64925</a>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Koperasi dengan fungsi kredit</div>
+                                    <span class="text-muted">Co-operative with credits functions</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_17" name="F010027" value="64925" {{#eq answers.F010027 '17'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64929">64929</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Pemberian kredit lain t.t.t.l.</div>
+                                    <span class="text-muted">Other credit granting n.e.c.</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_18" name="F010027" value="64929" {{#eq answers.F010027 '18'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64991">64991</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Syarikat pemfaktoran</div>
+                                    <span class="text-muted">Factoring companies</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_19" name="F010027" value="64991" {{#eq answers.F010027 '19'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64992">64992</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Wakil pejabat bank asing</div>
+                                    <span class="text-muted">Representative office of foreign banks</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_20" name="F010027" value="64992" {{#eq answers.F010027 '20'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64993">64993</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Syarikat nomini</div>
+                                    <span class="text-muted">Nominee companies</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_21" name="F010027" value="64993" {{#eq answers.F010027 '21'}}checked{{/eq}} required>
+                                          </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-64999">64999</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Aktiviti perkhidmatan kewangan lain, kecuali insurans/ takaful dan tabungan pencen, t.t.t.l.</div>
+                                    <span class="text-muted">Other financial service activities, except insurance/ takaful and pension funding n.e.c.</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_22" name="F010027" value="64999" {{#eq answers.F010027 '22'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66111">66111</a>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Bursa saham</div>
+                                    <span class="text-muted">Stock exchange</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_23" name="F010027" value="66111" {{#eq answers.F010027 '23'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66113">66113</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Bursa sekuriti</div>
+                                    <span class="text-muted">Securities exchange</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_24" name="F010027" value="66113" {{#eq answers.F010027 '24'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66119">66119</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Pentadbiran pasaran kewangan t.t.t.l.</div>
+                                    <span class="text-muted">Administration of financial markets n.e.c.</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_25" name="F010027" value="66119" {{#eq answers.F010027 '25'}}checked{{/eq}} required>
+                                        
+                                </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66121">66121</a>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Broker stok, saham dan bon</div>
+                                    <span class="text-muted">Stock, share and bond brokers</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_26" name="F010027" value="66121" {{#eq answers.F010027 '26'}}checked{{/eq}} required>
+                                          </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66122">66122</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Broker dan peniaga komoditi</div>
+                                    <span class="text-muted">Commodity brokers and dealers</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_27" name="F010027" value="66122" {{#eq answers.F010027 '27'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66123">66123</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Peniaga jongkong emas</div>
+                                    <span class="text-muted">Gold bullion dealers</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_28" name="F010027" value="66123" {{#eq answers.F010027 '28'}}checked{{/eq}} required>
+                                          </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66124">66124</a>
+                                    </div>
+                                </td>
+                                <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Broker dan peniaga tukaran wang asing (Bureaux de change)</div>
+                                    <span class="text-muted">Foreign exchange broker and dealers (Bureaux de change)</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_29" name="F010027" value="66124" {{#eq answers.F010027 '29'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66125">66125</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Perkhidmatan pengurup wang</div>
+                                    <span class="text-muted">Money-changing services</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_30" name="F010027" value="66125" {{#eq answers.F010027 '30'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66191">66191</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Perkhidmatan penasihat pelaburan</div>
+                                    <span class="text-muted">Investment advisory services</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_31" name="F010027" value="66191" {{#eq answers.F010027 '31'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66192">66192</a>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Perkhidmatan perundingan kewangan</div>
+                                    <span class="text-muted">Financial consultancy services</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_32" name="F010027" value="66192" {{#eq answers.F010027 '32'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66199">66199</a>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Aktiviti sokongan kepada kewangan t.t.t.l.</div>
+                                    <span class="text-muted">Activities auxiliary to finance n.e.c.</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_33" name="F010027" value="66199" {{#eq answers.F010027 '33'}}checked{{/eq}} required>
+                                          </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66302">66302</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Pengurusan aset/ portfolio</div>
+                                    <span class="text-muted">Assets/ portfolio management</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_34" name="F010027" value="66302" {{#eq answers.F010027 '34'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66303">66303</a>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Syarikat pengurusan unit amanah</div>
+                                    <span class="text-muted">Unit trust management companies</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_35" name="F010027" value="66303" {{#eq answers.F010027 '35'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65111">65111</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Insurans hayat</div>
+                                    <span class="text-muted">Life insurance</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_36" name="F010027" value="65111" {{#eq answers.F010027 '36'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65112">65112</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Takaful keluarga</div>
+                                    <span class="text-muted">Family takaful</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_37" name="F010027" value="65112" {{#eq answers.F010027 '37'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65121">65121</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Insurans am</div>
+                                    <span class="text-muted">General insurance</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_38" name="F010027" value="65121" {{#eq answers.F010027 '38'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65122">65122</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Takaful am</div>
+                                    <span class="text-muted">General takaful</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_39" name="F010027" value="65122" {{#eq answers.F010027 '39'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65123">65123</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Insurans komposit</div>
+                                    <span class="text-muted">Composite insurance</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_40" name="F010027" value="65123" {{#eq answers.F010027 '40'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65124">65124</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Insurans luar pesisir pantai</div>
+                                    <span class="text-muted">Offshore insurance</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_41" name="F010027" value="65124" {{#eq answers.F010027 '41'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65125">65125</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Takaful luar pesisir pantai</div>
+                                    <span class="text-muted">Offshore takaful</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_42" name="F010027" value="65125" {{#eq answers.F010027 '42'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65201">65201</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Insurans semula hayat</div>
+                                    <span class="text-muted">Life reinsurance</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_43" name="F010027" value="65201" {{#eq answers.F010027 '43'}}checked{{/eq}} required>
+                                        
+                                </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65203">65203</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Insurans semula am</div>
+                                    <span class="text-muted">General reinsurance</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_44" name="F010027" value="65203" {{#eq answers.F010027 '44'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65205">65205</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Takaful semula komposit</div>
+                                    <span class="text-muted">Composite retakaful</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_45" name="F010027" value="65205" {{#eq answers.F010027 '45'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65206">65206</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Insurans semula luar pesisir pantai</div>
+                                    <span class="text-muted">Offshore reinsurance</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_46" name="F010027" value="65206" {{#eq answers.F010027 '46'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65207">65207</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Takaful semula luar pesisir pantai</div>
+                                    <span class="text-muted">Offshore retakaful</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_47" name="F010027" value="65207" {{#eq answers.F010027 '47'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65301">65301</a>
+                                    </div>
+                                </td>
+                                <td>
+                                      <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Tabungan pencen</div>
+                                    <span class="text-muted">Pension funding</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_48" name="F010027" value="65301" {{#eq answers.F010027 '48'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-65302">65302</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Tabungan hemat</div>
+                                    <span class="text-muted">Provident funding</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_49" name="F010027" value="65302" {{#eq answers.F010027 '49'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66211">66211</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Perkhidmatan penyesuaian insurans</div>
+                                    <span class="text-muted">Insurance adjusting service</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_50" name="F010027" value="66211" {{#eq answers.F010027 '50'}}checked{{/eq}} required>
+                                         </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66223">66223</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Broker insurans</div>
+                                    <span class="text-muted">Insurance brokers</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_51" name="F010027" value="66223" {{#eq answers.F010027 '51'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td class="noborder-top">
+                                    <div class="text-default font-weight-semibold">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-66224">66224</a>
+                                    </div>
+                                </td>
+                                <td>
+                                     <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">Broker takaful</div>
+                                    <span class="text-muted">Takaful brokers</span>
+                                    <input type="radio" class="form-check-input-styled 010027" id="r-F010027_52" name="F010027" value="66224" {{#eq answers.F010027 '52'}}checked{{/eq}} required>
+                                        </label>
+                            </div>
+                                </td>
+                            </tr>
+                            </table>
+                            </td>
+                    </tr>
+                    <tbody>
+                    
+                      <tr class="office_use">
+                        <td colspan ="3" >
+                        </td>
+                        <td>
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600 mb-1">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+
+                        </td>
+                        </tr>
+                        <tr class="office_use">
+                            <td>
+                                
+                            </td>
+                        <td>
+                            <div class="font-weight-semibold">(a) Kod Industri (semasa mel) </div>
+                            <span class="text-muted">Industry Code (at the time mailing)</span>
+                        </td>
+                        <td>
+                        
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010029">010029</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            {{select table="ref_msic" filter=filterkp name="F010029" class="form-control" selected=answers.F010029}}
+                            <!--{{select table="ref_msic" filter="kp in ('309','820')" name="F010029" class="form-control" selected=answers.F010029}}-->
+                            <!--{{select table="view_appendix_4" id="s-F010029" name="F010029" class="form-control select-search" selected=answers.F010029}}-->
+                            <!--{{select table="view_appendix_1" filter="kp in ('309','820')" name="F010029" class="form-control" selected=answers.F010029}}-->
+                            <!--<input class="form-control only-number-pos" type="text" id="t-F010029" name="F010029" value="{{answers.F010029}}" maxlength="5" required>-->
+                        </td>
+                    </tr>
+                    <tr class="office_use">
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">(b) Kod Industri Semasa (mengikut produk utama tahun rujukan)</div>
+                            <span class="text-muted">Current Industry Code (based on major products of reference year)</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010030">010030</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            {{select table="ref_msic" filter=filterkp name="F010030" class="form-control" selected=answers.F010030}}
+                            <!--{{select table="ref_msic" filter="kp in ('309','820')" name="F010029" class="form-control" selected=answers.F010029}}-->
+                             <!--{{select table="view_appendix_2" filter="kp in ('309','820')" name="F010030" class="form-control select-search" selected=answers.F010030}}-->
+                        </td> 
+                       
+                    </tr>
+                    
+                    <tr>
+                        <td >
+                            <h6 class="mb-0">1.9</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila terangkan secara ringkas aktiviti utama yang dilaporkan di Soalan 1.8:</div>
+                            <span class="text-muted">Please describe briefly the principal activity reported in Question 1.8:</span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010028">010028</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea rows="5" class="form-control" id="tx-F010028" name="F010028" maxlength="250" required>{{answers.F010028}}</textarea>
+                            
+                        </td>
+                    </tr>
+                     <tr>
+                        <td >
+                            <h6 class="mb-0">1.10</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila nyatakan peratus pendapatan pertubuhan ini yang dihasilkan daripada aktiviti berikut:</div>
+                            <span class="text-muted">Please specify the percentage of this establishment’s revenue was generated from the following activities:</span>
+                        <br/><br/>
+                            <div class="font-weight-semibold">(a) Aktiviti utama (merujuk aktiviti di Soalan 1.8)</div>
+                            <span class="text-muted">Principle activity (refer to activity in Question 1.8)</span>
+                        <br/><br/>
+                            <div class="font-weight-semibold">(b) Aktiviti sekunder (selain daripada aktiviti di Soalan 1.8), sila nyatakan:</div>
+                            <span class="text-muted">Secondary activity (other than activity in Question 1.8), please specify:</span>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                            <span class="badge badge-mark border-blue mr-1"></span>
+                            <a class="ancor" id="a-010033">010033</a>
+                            </div>
+                            <!--<input class="form-control" type="text" id="t-F010033" name="F010033" value="{{answers.F010033}}" maxlength="25">-->
+                            <textarea rows="3" class="form-control" id="tx-F010033" name="F010033" maxlength="250" required>{{answers.F010033}}</textarea>
+                        </td>
+                        <td>
+                            <br/><br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010031">010031</a> <span class="text-danger">*</span>
+                            </div>
+                            <br/><br/>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010032">010032</a>
+                            </div>
+                            <br/><br/>
+                            <div class="font-weight-semibold">Jumlah</div>
+                                <span class="text-muted">Total</span>
+                                <div class="form-group-feedback-right">
+                                </div>
+                            
+                            </div>
+                        </td>
+                        <td>
+                            <br/><br/><br/>
+                            <div class="form-group-feedback form-group-feedback-right">
+                            <input class="form-control only-number-pos" type="text" id="t-F010031" name="F010031" value="{{answers.F010031}}" maxlength="3" required>
+                            <div class="form-control-feedback form-control-feedback-lg">%</div>
+                             <br/><br/>
+                             <div class="form-group-feedback form-group-feedback-right">
+                            <input class="form-control only-number-pos" type="text" id="t-F010032" name="F010032" value="{{answers.F010032}}" maxlength="3" required>
+                            <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            <br/><br/>
+                            <div class="form-group-feedback form-group-feedback-right">
+                            <input class="form-control test-right only number-pos" type="text" maxlength="3" id="t-F030001" name="F030001" readonly>
+                            <div class="form-control-feedback form-control-feedback-lg">%</div>
+                        </td> 
+                    </tr>
+                    <tr  class="office_use">
+                        <td colspan="1">
+                        </td>
+                        
+                        <td>
+                            <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600 mb-1">
+                                <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+                            </button>
+                        </td>
+                        </tr>
+                       <tr class="office_use">
+                           
+                          <td colspan="1">
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Kod Industri Sekunder</div>
+                            <span class="text-muted">Secondary Industry Code</span>
+                        </td>
+                        <td>
+                            
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010034">010034</a>
+                            </div>
+                        </td>
+                        <td>
+                            {{select table="ref_msic" name="F010034" filter=filterkp class="form-control" selected=answers.F010034}}
+                            <!--{{select table="view_appendix_1" filter="kp in ('309','820')" name="F010034" class="form-control" selected=answers.F010034}}-->
+                            <!--<input class="form-control only-number-pos" type="text" id="t-F010034" name="F010034" value="{{answers.F010034}}" maxlength="5" required>-->
+                        </td>
+                    </tr>
+                    <tr>
+                   
+                    
+                    <tr>
+                        <td>
+                            <h6 class="mb-0">1.11</h6>
+                        </td>
+                         <td>
+                            <div class="font-weight-semibold">Adakah pertubuhan ini melabur di luar Malaysia?</div>
+                            <span class="text-muted">Does this establishment invest outside Malaysia?</span>
+                            <br/><br/>
+                             <div class="font-weight-semibold">Sila tanda (X) dalam satu kotak sahaja</div>
+                            <span class="text-muted">Please mark (X) in one box only</span>
+                            <br/><br/>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-010035">010035</a> <span class="text-danger">*</span>
+                                <!--<button type="button"
+                                 class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset"
+                                data-val="010035" style="float:right;" title="Reset">
+                               <i class="icon-undo"></i>
+                              </button>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes</span>
+                                    <input type="radio" class="form-check-input-styled 010035" id="r-F010035_1" name="F010035" value="1" {{#eq answers.F010035 '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</span>
+                                    <input type="radio" class="form-check-input-styled 010035" id="r-F010035_2" name="F010035" value="2" {{#eq answers.F010035 '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

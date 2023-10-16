@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    
+    <script type="text/javascript">
+        $(function() {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                scrollX: true
+                ,scrollY: '50vh'
+                ,scrollCollapse: true
+                ,fixedColumns: true
+                ,paging: false
+                ,ordering: false
+                ,searching: false
+                ,bInfo: false
+            });
+            
+            // hit enter focus on next input
+            $('.form-control').keydown(function (e) {
+                if (e.which === 13) {
+                    var index = $('.form-control').index(this) + 1;
+                    $('.form-control').eq(index).focus();
+                }
+            });
+        });
+        
+        function initForm(){
+            
+            //readonly
+            $( "input#t-F053099" ).prop( "readonly" , true);
+            $( "input#t-F053199" ).prop( "readonly" , true);
+            
+            
+            //053099
+            var arr_F053099 = ['F053001','F053002','F053003','F053004', 'F053005', 'F053006','F053007', 'F053008', 'F053009', 'F053010','F053011', 'F053012', 'F053013', 'F053014'];
+            autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true );
+            $( "#t-F053001" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053002" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053003" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053004" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053005" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053006" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053007" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053008" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053009" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053010" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053011" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053012" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053013" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            $( "#t-F053014" ).blur( function() { autoCalculate( arr_F053099, 'F053099', 1, 999999, false, true ); $( "#t-F053099" ).trigger( "keyup" ); });
+            
+            //053199
+            var arr_F053199 = ['F053101','F053102','F053103','F053104', 'F053105', 'F053106','F053107', 'F053108', 'F053109', 'F053110','F053111', 'F053112', 'F053113', 'F053114'];
+            autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true );
+            $( "#t-F053101" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053102" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053103" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053104" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053105" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053106" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053107" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053108" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053109" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053110" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053111" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053112" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053113" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            $( "#t-F053114" ).blur( function() { autoCalculate( arr_F053199, 'F053199', 1, 999999, false, true ); $( "#t-F053199" ).trigger( "keyup" ); });
+            
+        }
+        
+    </script>
+    <style>
+        table.table-bordered thead tr th {
+            text-align: center;
+            white-space: normal !important;
+        }
+        table.table-bordered thead {
+            border-bottom: 2px solid black;
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tfoot {
+            border-top: 2px solid black;
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: bottom;
+        }
+        
+        table.table-bordered thead tr th,
+        table.table-bordered tbody tr td,
+        table.table-bordered tfoot tr td {
+            padding: 10px;
+            line-height: 1.3;
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+        }
+        
+        table.table-bordered thead tr th.first-child-col,
+        table.table-bordered tbody tr td.first-child-col,
+        table.table-bordered tfoot tr td.first-child-col {
+            width: 300px;
+            min-width: 300px;
+            max-width: 300px;
+            background-color: #f5f5f5;
+            vertical-align: top;
+        }
+        
+        table.table-bordered thead tr th.special-long-col {
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+        }
+        table.datatable-fixed-left div.col-lg-10{
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">5E</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800">BILANGAN PEKERJA BUKAN WARGANEGARA MALAYSIA MENGIKUT NEGARA ASAL DAN TEMPOH PERKHIDMATAN DI MALAYSIA
+                        <br/><span class="text-teal-400 font-size-sm">NUMBER OF NON-MALAYSIAN CITIZEN PERSONS ENGAGED BY COUNTRY OF ORIGIN AND LENGTH OF SERVICE IN MALAYSIA</span></h6>
+                    </td>
+                      
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+			<table class="table table-bordered datatable-fixed-left" style = "width: 100%">
+				<thead>
+			        <tr>
+			            <th rowspan="2" class="first-child-col" style="vertical-align: middle;">
+			                Negara Asal  
+			                <br/><span class="text-muted">Country of Origin </span>
+		                </th>
+		                <th colspan="2">
+		                  Tempoh Perkhidmatan di Malaysia
+			                <br/><span class="text-muted">Length of Service in Malaysia</span>
+		                </th>
+			           </tr>
+                    <tr>
+                        <th colspan="1">
+                            3 tahun dan ke bawah (orang)
+			                <br/><span class="text-muted">3 years and below (persons)</span>
+		                </th>
+                        <th rowspan="1">
+                            Melebihi 3 tahun (orang)
+			                <br/><span class="text-muted">More than 3 years (persons)</span>
+		                </th>
+                    </tr>
+                </thead>
+			    <tbody>
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.1
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Republic of Indonesia
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053001">053001</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053001" name="F053001" value="{{answers.F053001}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053101">053101</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053101" name="F053101" value="{{answers.F053101}}">
+						</td>
+			        </tr> <!--9.1-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.2
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Bangladesh
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053002">053002</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053002" name="F053002" value="{{answers.F053002}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053102">053102</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053102" name="F053102" value="{{answers.F053102}}">
+						</td>
+			        </tr> <!--9.2-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.3
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                       Nepal
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053003">053003</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053003" name="F053003" value="{{answers.F053003}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053103">053103</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053103" name="F053103" value="{{answers.F053103}}">
+						</td>
+			        </tr> <!--9.3.1-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.4
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Republic of Union of Myanmar
+    	                        </div>
+	                        </div>
+    		                     
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053004">053004</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053004" name="F053004" value="{{answers.F053004}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053104">053104</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053104" name="F053104" value="{{answers.F053104}}">
+						</td>
+			        </tr> <!--9.3.2 a--> 
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.5
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                       India
+    	                        </div>
+	                        </div>
+    		                    
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053005">053005</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053005" name="F053005" value="{{answers.F053005}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053105">053105</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053105" name="F053105" value="{{answers.F053105}}">
+						</td>
+			        </tr> <!--9.3.2 b-->
+			         <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.6
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Pakistan
+    	                        </div>
+	                        </div>
+    		                   
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053006">053006</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053006" name="F053006" value="{{answers.F053006}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053106">053106</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053106" name="F053106" value="{{answers.F053106}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+			         <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.7
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Philippines
+    	                        </div>
+	                        </div>
+    		                    
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053007">053007</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053007" name="F053007" value="{{answers.F053007}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053107">053107</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053107" name="F053107" value="{{answers.F053107}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+			         <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.8
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Socialist Republic of Vietnam
+    	                        </div>
+	                        </div>
+    		                    
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053008">053008</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053008" name="F053008" value="{{answers.F053008}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053108">053108</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053108" name="F053108" value="{{answers.F053108}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+			         <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.9
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        People's Republic of China
+    	                        </div>
+	                        </div>
+    		                   
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053009">053009</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053009" name="F053009" value="{{answers.F053009}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053109">053109</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053109" name="F053109" value="{{answers.F053109}}">
+						</td>
+			        </tr> <!--9.3.2 b-->
+			         <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.10
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                       Kingdom of Thailand
+    	                        </div>
+	                        </div>
+    		                   
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053010">053010</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053010" name="F053010" value="{{answers.F053010}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053110">053110</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053110" name="F053110" value="{{answers.F053110}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+			         <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.11
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Democratic Socialist Republic of Sri Lanka
+    	                        </div>
+	                        </div>
+    		                    
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053011">053011</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053011" name="F053011" value="{{answers.F053011}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053111">053111</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053111" name="F053111" value="{{answers.F053111}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+			         <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.12
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Kingdom of Cambodia
+    	                        </div>
+	                        </div>
+    		                   
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053012">053012</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053012" name="F053012" value="{{answers.F053012}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053112">053112</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053112" name="F053112" value="{{answers.F053112}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+			         <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.13
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Lao People's Democratic Republic
+    	                        </div>
+	                        </div>
+    		                    
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053013">053013</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053013" name="F053013" value="{{answers.F053013}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053113">053113</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053113" name="F053113" value="{{answers.F053113}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.14
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Lain-lain (sila nyatakan)
+    	                        </div>
+    	                        <br/><br/>
+    	                        <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-053X14a">053X14a</a>
+                            </div>
+							<textarea rows="3" class="form-control" id="tx-F053X14a" name="F053X14a"  maxlength="250">{{answers.F053X14a}}</textarea>
+	                        </div>
+    		                    
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053014">053014</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053014" name="F053014" value="{{answers.F053014}}">
+							<br><br><br><br><br><br>
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F053114">053114</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053114" name="F053114" value="{{answers.F053114}}">
+							<br><br><br><br><br><br>
+							<!--<div class="form-group-feedback">
+							  <textarea rows="3" class="form-control" id="tx-F053114a" name="F053114a"  maxlength="250">{{answers.F053114a}}</textarea>
+							</div>-->
+						</td>
+			        </tr> <!--9.3.3-->
+			    </tbody>
+			    <tfoot>
+			      <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.15
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Jumlah
+    		                        <br/><span class="text-muted">Total</span>
+    	                        </div>
+	                        </div>
+    		                    
+		                </td>
+			            <td>
+                           <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-053099">053099</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053099" name="F053099" value="{{answers.F053099}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-053199">053199</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="5" id="t-F053199" name="F053199" value="{{answers.F053199}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+                 
+			    </tfoot>
+			    
+			</table>
+			
+				
+			    </tbody>
+			  
+	    </table>
+		
+		
+			    
+			     
+			        
+			 
+		
+			
+	
+</div>
+</div>
+
+</body>
+</html>

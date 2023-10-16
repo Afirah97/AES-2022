@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    
+    <script type="text/javascript">
+        $(function() {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                scrollX: true
+                ,scrollY: '50vh'
+                ,scrollCollapse: true
+                ,fixedColumns: true
+                ,paging: false
+                ,ordering: false
+                ,searching: false
+                ,bInfo: false
+            });
+            
+            // hit enter focus on next input
+            $('.form-control').keydown(function (e) {
+                if (e.which === 13) {
+                    var index = $('.form-control').index(this) + 1;
+                    $('.form-control').eq(index).focus();
+                }
+            });
+        });
+        
+        function initForm(){
+             
+            //readonly JUMLAH
+            $( "input#t-F050803" ).prop( "readonly" , true);
+            $( "input#t-F050804" ).prop( "readonly" , true);
+            $( "input#t-F050805" ).prop( "readonly" , true);
+            $( "input#t-F050806" ).prop( "readonly" , true);
+            $( "input#t-F050807" ).prop( "readonly" , true);
+            $( "input#t-F050808" ).prop( "readonly" , true);
+            $( "input#t-F050809" ).prop( "readonly" , true);
+            $( "input#t-F050816" ).prop( "readonly" , true);
+           
+            $( "input#t-F050812" ).prop( "readonly" , true);
+            $( "input#t-F050813" ).prop( "readonly" , true);
+            
+            //readonly Jumlah 5.3.9
+            $( "input#t-F052689" ).prop( "readonly" , true);
+            $( "input#t-F052789" ).prop( "readonly" , true);
+            $( "input#t-F050889" ).prop( "readonly" , true);
+            
+            //readonly Jumlah 5.5
+            $( "input#t-F052699" ).prop( "readonly" , true);
+            $( "input#t-F052799" ).prop( "readonly" , true);
+            $( "input#t-F050899" ).prop( "readonly" , true);
+        
+
+            //050803
+            var arr_F050803 = ['F052603','F052703'];
+            autoCalculate( arr_F050803, 'F050803', 1, 999999, false, true );
+            $( "#t-F052603" ).blur( function() { autoCalculate( arr_F050803, 'F050803', 1, 999999, false, true ); $( "#t-F050803" ).trigger( "keyup" ); });
+            $( "#t-F052703" ).blur( function() { autoCalculate( arr_F050803, 'F050803', 1, 999999, false, true ); $( "#t-F050803" ).trigger( "keyup" ); });
+
+            //050804
+            var arr_F050804 = ['F052604','F052704'];
+            autoCalculate( arr_F050804, 'F050804', 1, 999999, false, true );
+            $( "#t-F052604" ).blur( function() { autoCalculate( arr_F050804, 'F050804', 1, 999999, false, true ); $( "#t-F050804" ).trigger( "keyup" ); });
+            $( "#t-F052704" ).blur( function() { autoCalculate( arr_F050804, 'F050804', 1, 999999, false, true ); $( "#t-F050804" ).trigger( "keyup" ); });
+
+            //050805
+            var arr_F050805 = ['F052605','F052705'];
+            autoCalculate( arr_F050805, 'F050805', 1, 999999, false, true );
+            $( "#t-F052605" ).blur( function() { autoCalculate( arr_F050805, 'F050805', 1, 999999, false, true ); $( "#t-F050805" ).trigger( "keyup" ); });
+            $( "#t-F052705" ).blur( function() { autoCalculate( arr_F050805, 'F050805', 1, 999999, false, true ); $( "#t-F050805" ).trigger( "keyup" ); });
+
+            //050806
+            var arr_F050806 = ['F052606','F052706'];
+            autoCalculate( arr_F050806, 'F050806', 1, 999999, false, true );
+            $( "#t-F052606" ).blur( function() { autoCalculate( arr_F050806, 'F050806', 1, 999999, false, true ); $( "#t-F050806" ).trigger( "keyup" ); });
+            $( "#t-F052706" ).blur( function() { autoCalculate( arr_F050806, 'F050806', 1, 999999, false, true ); $( "#t-F050806" ).trigger( "keyup" ); });
+
+            //050807
+            var arr_F050807 = ['F052607','F052707'];
+            autoCalculate( arr_F050807, 'F050807', 1, 999999, false, true );
+            $( "#t-F052607" ).blur( function() { autoCalculate( arr_F050807, 'F050807', 1, 999999, false, true ); $( "#t-F050807" ).trigger( "keyup" ); });
+            $( "#t-F052707" ).blur( function() { autoCalculate( arr_F050807, 'F050807', 1, 999999, false, true ); $( "#t-F050807" ).trigger( "keyup" ); });
+
+            //050808
+            var arr_F050808 = ['F052608','F052708'];
+            autoCalculate( arr_F050808, 'F050808', 1, 999999, false, true );
+            $( "#t-F052608" ).blur( function() { autoCalculate( arr_F050808, 'F050808', 1, 999999, false, true ); $( "#t-F050808" ).trigger( "keyup" ); });
+            $( "#t-F052708" ).blur( function() { autoCalculate( arr_F050808, 'F050808', 1, 999999, false, true ); $( "#t-F050808" ).trigger( "keyup" ); });
+
+            //050809
+            var arr_F050809 = ['F052609','F052709'];
+            autoCalculate( arr_F050809, 'F050809', 1, 999999, false, true );
+            $( "#t-F052609" ).blur( function() { autoCalculate( arr_F050809, 'F050809', 1, 999999, false, true ); $( "#t-F050809" ).trigger( "keyup" ); });
+            $( "#t-F052709" ).blur( function() { autoCalculate( arr_F050809, 'F050809', 1, 999999, false, true ); $( "#t-F050809" ).trigger( "keyup" ); });
+
+            //050816
+            var arr_F050816 = ['F052616','F052716'];
+            autoCalculate( arr_F050816, 'F050816', 1, 999999, false, true );
+            $( "#t-F052616" ).blur( function() { autoCalculate( arr_F050816, 'F050816', 1, 999999, false, true ); $( "#t-F050816" ).trigger( "keyup" ); });
+            $( "#t-F052716" ).blur( function() { autoCalculate( arr_F050816, 'F050816', 1, 999999, false, true ); $( "#t-F050816" ).trigger( "keyup" ); });
+
+           
+
+            //050812
+            var arr_F050812 = ['F052612','F052712'];
+            autoCalculate( arr_F050812, 'F050812', 1, 999999, false, true );
+            $( "#t-F052612" ).blur( function() { autoCalculate( arr_F050812, 'F050812', 1, 999999, false, true ); $( "#t-F050812" ).trigger( "keyup" ); });
+            $( "#t-F052712" ).blur( function() { autoCalculate( arr_F050812, 'F050812', 1, 999999, false, true ); $( "#t-F050812" ).trigger( "keyup" ); });
+
+            //050813
+            var arr_F050813 = ['F052613','F052713'];
+            autoCalculate( arr_F050813, 'F050813', 1, 999999, false, true );
+            $( "#t-F052613" ).blur( function() { autoCalculate( arr_F050813, 'F050813', 1, 999999, false, true ); $( "#t-F050813" ).trigger( "keyup" ); });
+            $( "#t-F052713" ).blur( function() { autoCalculate( arr_F050813, 'F050813', 1, 999999, false, true ); $( "#t-F050813" ).trigger( "keyup" ); });
+
+            //050889
+            var arr_F050889 = ['F052689','F052789'];
+            autoCalculate( arr_F050889, 'F050889', 1, 999999, false, true );
+            $( "#t-F052689" ).keyup (function() { autoCalculate( arr_F050889, 'F050889', 1, 999999, false, true ); $( "#t-F050889" ).trigger( "keyup" ); });
+            $( "#t-F052789" ).keyup (function() { autoCalculate( arr_F050889, 'F050889', 1, 999999, false, true ); $( "#t-F050889" ).trigger( "keyup" ); });
+
+            //050899
+            var arr_050899 = ['F052699','F052799'];
+            autoCalculate( arr_050899, '050899', 1, 999999, false, true );
+            $( "#t-F052699" ).keyup (function() { autoCalculate( arr_050899, '050899', 1, 999999, false, true ); $( "#t-050899" ).trigger( "keyup" ); });
+            $( "#t-F052799" ).keyup (function() { autoCalculate( arr_050899, '050899', 1, 999999, false, true ); $( "#t-050899" ).trigger( "keyup" ); });
+
+            //052689
+            var arr_F052689 = ['F052603','F052604','F052605','F052606', 'F052607', 'F052608','F052609', 'F052616', 'F052612'];
+            autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true );
+            $( "#t-F052603" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+            $( "#t-F052604" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+            $( "#t-F052605" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+            $( "#t-F052606" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+            $( "#t-F052607" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+            $( "#t-F052608" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+            $( "#t-F052609" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+            $( "#t-F052616" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+            $( "#t-F052612" ).blur( function() { autoCalculate( arr_F052689, 'F052689', 1, 999999, false, true ); $( "#t-F052689" ).trigger( "keyup" ); });
+
+            //052789
+            var arr_F052789 = ['F052703','F052704','F052705','F052706', 'F052707', 'F052708','F052709', 'F052716', 'F052712'];
+            autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true );
+            $( "#t-F052703" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+            $( "#t-F052704" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+            $( "#t-F052705" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+            $( "#t-F052706" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+            $( "#t-F052707" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+            $( "#t-F052708" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+            $( "#t-F052709" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+            $( "#t-F052716" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+            $( "#t-F052712" ).blur( function() { autoCalculate( arr_F052789, 'F052789', 1, 999999, false, true ); $( "#t-F052789" ).trigger( "keyup" ); });
+
+            //052699
+            var arr_F052699 = ['F052613','F052689'];
+            autoCalculate( arr_F052699, 'F052699', 1, 999999, false, true );
+            $( "#t-F052613" ).blur( function() { autoCalculate( arr_F052699, 'F052699', 1, 999999, false, true ); $( "#t-F052699" ).trigger( "keyup" ); });
+            $( "#t-F052689" ).keyup (function() { autoCalculate( arr_F052699, 'F052699', 1, 999999, false, true ); $( "#t-F052699" ).trigger( "keyup" ); });
+       
+            //052799
+            var arr_F052799 = ['F052713','F052789'];
+            autoCalculate( arr_F052799, 'F052799', 1, 999999, false, true );
+            $( "#t-F052713" ).blur( function() { autoCalculate( arr_F052799, 'F052799', 1, 999999, false, true ); $( "#t-F052799" ).trigger( "keyup" ); });
+            $( "#t-F052789" ).keyup (function() { autoCalculate( arr_F052799, 'F052799', 1, 999999, false, true ); $( "#t-F052799" ).trigger( "keyup" ); });
+       
+            //050899
+            var arr_F050899 = ['F050889','F050813'];
+            autoCalculate( arr_F050899, 'F050899', 1, 999999, false, true );
+            $( "#t-F050889" ).keyup (function() { autoCalculate( arr_F050899, 'F050899', 1, 999999, false, true ); $( "#t-F050899" ).trigger( "keyup" ); });
+            $( "#t-F050813" ).keyup (function() { autoCalculate( arr_F050899, 'F050899', 1, 999999, false, true ); $( "#t-F050899" ).trigger( "keyup" ); });
+
+        }
+        
+    </script>
+    <style>
+        table.table-bordered thead tr th {
+            text-align: center;
+            white-space: normal !important;
+        }
+        table.table-bordered thead {
+            border-bottom: 2px solid black;
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tfoot {
+            border-top: 2px solid black;
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: bottom;
+        }
+        
+        table.table-bordered thead tr th,
+        table.table-bordered tbody tr td,
+        table.table-bordered tfoot tr td {
+            padding: 10px;
+            line-height: 1.3;
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+        }
+        
+        table.table-bordered thead tr th.first-child-col,
+        table.table-bordered tbody tr td.first-child-col,
+        table.table-bordered tfoot tr td.first-child-col {
+            width: 300px;
+            min-width: 300px;
+            max-width: 300px;
+            background-color: #f5f5f5;
+            vertical-align: top;
+        }
+        
+        table.table-bordered thead tr th.special-long-col {
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+        }
+        table.datatable-fixed-left div.col-lg-10{
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">5C</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> GAJI & UPAH DIBAYAR (LELAKI)
+                        <br/><span class="text-teal-400 font-size-sm">SALARIES & WAGES PAID (MALE)</span></h6>
+                    </td>
+                   </tr> 
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+			<table class="table table-bordered datatable-fixed-left" style = "width: 100%">
+				<thead>
+			        <tr>
+			            <th rowspan="2" class="first-child-col" style="vertical-align: middle;">
+			                Kategori Pekerja / Jawatan (Lelaki)
+			                <br/><span class="text-muted">Category of Worker / Occupation (Male) </span>
+		                </th>
+		                <th colspan="3">
+		                   Gaji & Upah Tahunan *
+			                <br/><span class="text-muted">Annual Salaries & Wages </span>
+			                <br/>(RM)
+		                </th>
+			           </tr>
+                    <tr>
+                        <th>
+                            Warganegara Malaysia
+			                <br/><span class="text-muted">Malaysia Citizen</span>
+		                </th>
+                        <th>
+                            Bukan Warganegara Malaysia
+			                <br/><span class="text-muted">Non-Malaysia Citizen</span>
+		                </th>
+                        <th>
+                            Jumlah
+			                <br/><span class="text-muted">Total</span>
+		                </th>
+                    </tr>
+                </thead>
+			    <tbody>
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.1
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Pemilik yang bekerja dan rakan niaga yang aktif
+    		                        <br/><span class="text-muted">Working proprietor and active business partner</span>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            
+						</td>
+			            <td>
+                           
+						</td>
+			            <td>
+                           
+						</td>
+			        </tr> <!--9.1-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.2
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Pekerja keluarga tidak bergaji (semua ahli keluarga dan rakan yang tidak menerima upah yang tetap)
+	                                <br/><span class="text-muted">Unpaid family workers (all members of family and friends not receiving regular wages)</span>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                           
+						</td>
+			            <td>
+                            
+						</td>
+			            <td>
+                           
+						</td>
+			        </tr> <!--9.2-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.3
+    			                </div>
+    		                    <div class="col-lg-10 ">
+    		                        Pekerja bergaji (sepenuh masa) 
+    		                        <br/><span class="text-muted">Paid employees (full-time)</span>
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.1
+            			                </div>
+            		                    <div class="col-lg-10">
+            		                        Pengurus
+            		                        <br/><span class="text-muted">Manager</span>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052603">052603</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052603" name="F052603" value="{{answers.F052603}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052703">052703</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052703" name="F052703" value="{{answers.F052703}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050803">050803</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050803" name="F050803" value="{{answers.F050803}}">
+						</td>
+			        </tr> <!--9.3.1-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.2
+            			                </div>
+            		                    <div class="col-lg-10">
+            		                        Profesional
+            		                        <br/><span class="text-muted">Professional</span>
+    		                                <div class="row">
+                    			                <div class="col-lg-1 text-nowrap">
+                    			                    
+                    			                </div>
+                    		                    <div class="col-lg-10">
+                    		                        (a) Profesional (kecuali Penyelidik)
+                    		                        <br/><span class="text-muted">Professionals (except Researcher)</span>
+                		                        </div>
+                		                    </div>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052604">052604</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052604" name="F052604" value="{{answers.F052604}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052704">052704</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052704" name="F052704" value="{{answers.F052704}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050804">050804</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050804" name="F050804" value="{{answers.F050804}}">
+						</td>
+			        </tr> <!--9.3.2 a--> 
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    
+            			                </div>
+            		                    <div class="col-lg-10">
+    		                                <div class="row">
+                    			                <div class="col-lg-1 text-nowrap">
+                    			                    
+                    			                </div>
+                    		                    <div class="col-lg-10">
+                    		                        (b) Penyelidik
+    		                                        <br/><span class="text-muted">Researcher</span>
+                		                        </div>
+                		                    </div>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052605">052605</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052605" name="F052605" value="{{answers.F052605}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052705">052705</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052705" name="F052705" value="{{answers.F052705}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050805">050805</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050805" name="F050805" value="{{answers.F050805}}">
+						</td>
+			        </tr> <!--9.3.2 b--> 
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.3
+            			                </div>
+            		                    <div class="col-lg-10">
+            		                        Juruteknik dan Profesional Bersekutu
+	                                        <br/><span class="text-muted">Technician and Associate Professional</span>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052606">052606</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052606" name="F052606" value="{{answers.F052606}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052706">052706</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052706" name="F052706" value="{{answers.F052706}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050806">050806</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050806" name="F050806" value="{{answers.F050806}}">
+						</td>
+			        </tr> <!--9.3.3-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.4
+            			                </div>
+            		                    <div class="col-lg-10">
+            		                        Pekerja Sokongan Perkeranian
+	                                        <br/><span class="text-muted">Clerical Support Worker</span>
+            			                </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052607">052607</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052607" name="F052607" value="{{answers.F052607}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052707">052707</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052707" name="F052707" value="{{answers.F052707}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050807">050807</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050807" name="F050807" value="{{answers.F050807}}">
+						</td>
+			        </tr> <!--9.3.4-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.5
+            			                </div>
+            		                    <div class="col-lg-10">
+            		                        Pekerja Perkhidmatan dan Jualan
+    		                                <br/><span class="text-muted">Service and Sales Worker</span>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052608">052608</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052608" name="F052608" value="{{answers.F052608}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052708">052708</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052708" name="F052708" value="{{answers.F052708}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050808">050808</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050808" name="F050808" value="{{answers.F050808}}">
+						</td>
+			        </tr> <!--9.3.5-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.6
+            			                </div>
+            		                    <div class="col-lg-10">
+            		                        Pekerja Kemahiran dan Pekerja Pertukangan yang berkaitan
+            		                        <br/><span class="text-muted">Craft and Related Trades Worker</span>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052609">052609</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052609" name="F052609" value="{{answers.F052609}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052709">052709</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052709" name="F052709" value="{{answers.F052709}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050809">050809</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050809" name="F050809" value="{{answers.F050809}}">
+						</td>
+			        </tr> <!--9.3.6-->
+			        
+			         <tr>
+			             <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10 ">
+    		                        <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.7
+            			                </div>
+            			                <div class="col-lg-10">
+    		                        Operator Mesin & Loji dan Pemasang 
+    		                        <br/><span class="text-muted">Plant & Machine Operators and Assembler</span>
+        			                <!--<div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			               </div>
+            		                    <div class="col-lg-10">
+            		                        (a) Diambil secara langsung
+            		                        <br/><span class="text-muted">Directly employed</span>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>-->
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052616">052616</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052616" name="F052616" value="{{answers.F052616}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052716">052716</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052716" name="F052716" value="{{answers.F052716}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050816">050816</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050816" name="F050816" value="{{answers.F050816}}">
+						</td>
+			        </tr>
+			        
+			           <!--<tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    
+            			                </div>
+            		                    <div class="col-lg-10">
+    		                                <div class="row">
+                    			                <div class="col-lg-1 text-nowrap">
+                    			                    
+                    			                </div>
+                    		                    <div class="col-lg-10">
+                    		                       (b) Diambil melalui kontraktor buruh
+    		                                        <br/><span class="text-muted">Employed through labour contractor</span>
+                		                        </div>
+                		                    </div>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052611">052611</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052611" name="F052611" value="{{answers.F052611}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052711">052711</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052711" name="F052711" value="{{answers.F052711}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050811">050811</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050811" name="F050811" value="{{answers.F050811}}">
+						</td>
+			        </tr> <!--9.3.2 b -->
+	       
+			        
+		        
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.8
+            			                </div>
+            		                    <div class="col-lg-10">
+            		                        Pekerja Asas
+    		                                <br/><span class="text-muted">Elementary Occupation</span>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052612">052612</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052612" name="F052612" value="{{answers.F052612}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052712">052712</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052712" name="F052712" value="{{answers.F052712}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050812">050812</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050812" name="F050812" value="{{answers.F050812}}">
+						</td>
+			        </tr> <!--9.3.8-->
+			           <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                </div>
+    		                    <div class="col-lg-10">
+        			                <div class="row">
+            			                <div class="col-lg-1 text-nowrap">
+            			                    5.3.9
+            			                </div>
+            		                    <div class="col-lg-10">
+            			                    Jumlah pekerja bergaji (sepenuh masa) (5.3.1 hingga 5.3.8)
+    		                                <br/><span class="text-muted">Total paid employees (full-time) (5.3.1 to 5.3.8)</span>
+            		                    </div>
+        		                    </div>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052689">052689</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052689" name="F052689" value="{{answers.F052689}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052789">052789</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052789" name="F052789" value="{{answers.F052789}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050889">050889</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050889" name="F050889" value="{{answers.F050889}}">
+						</td>
+			        </tr> <!--9.3.9-->
+			        <tr>
+			            <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.4
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        Pekerja bergaji (sambilan)
+    		                        <br/><span class="text-muted">Paid employees (part-time)</span>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052613">052613</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052613" name="F052613" value="{{answers.F052613}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052713">052713</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052713" name="F052713" value="{{answers.F052713}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050813">050813</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050813" name="F050813" value="{{answers.F050813}}">
+						</td>
+			        </tr> <!--9.4-->
+			    </tbody>
+			    <tfoot>
+			        <tr>
+			              <td class="first-child-col">
+			                <div class="row">
+    			                <div class="col-lg-1 text-nowrap">
+    			                    5.5
+    			                </div>
+    		                    <div class="col-lg-10">
+    		                        JUMLAH (5.3.9 + 5.4)
+	                                <br/><span class="text-muted">TOTAL (5.3.9 + 5.4)</span>
+    	                        </div>
+	                        </div>
+		                </td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052699">052699</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052699" name="F052699" value="{{answers.F052699}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F052799">052799</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F052799" name="F052799" value="{{answers.F052799}}">
+						</td>
+			            <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-F050899">050899</a>
+                            </div>
+							<input class="form-control only-number-pos" type="text" maxlength="12" id="t-F050899" name="F050899" value="{{answers.F050899}}">
+						</td>
+			        </tr> <!--9.5-->
+			        
+			    </tfoot>
+			</table>
+</div>
+</div>    
+			
+    <footer>
+  <p>&nbsp; &nbsp;*Gaji & upah kasar, bonus dan elaun tunai lain yang dibayar kepada pekerja (termasuk upah lebih masa). Masukkan semua pembayaran yang dibuat kepada semua pekerja dalam tahun 2021, sama ada mereka masih di dalam daftar gaji Disember 2021 atau pada tempoh gaji akhir 2021.<br>
+  <span class="text-muted">&nbsp; &nbsp;Gross salaries & wages, bonuses and other cash allowances to employees (include over-time wages). Includes payments made during 2021 to all workers whether or not they were still on the payroll in December 2021 or the last pay period 2021.</span>
+</footer>
+</body>
+
+</html>

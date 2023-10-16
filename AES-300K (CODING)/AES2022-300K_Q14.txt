@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+<head>
+    <script type="text/javascript">
+        $(function() {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                columnDefs: [
+                    { 
+                        orderable: false,
+                        targets: [5]
+                    },
+                    { 
+                        width: "200px",
+                        targets: [0]
+                    },
+                    { 
+                        width: "300px",
+                        targets: [1]
+                    },
+                    { 
+                        width: "200px",
+                        targets: [5, 6]
+                    },
+                    { 
+                        width: "100px",
+                        targets: [4]
+                    }
+                ],
+                scrollX: true,
+                scrollY: '350px',
+                scrollCollapse: true,
+                fixedColumns: true
+            });
+        });
+        
+        function initForm(){
+                
+                var arr_F181801_2 = ['#t-F181803','#t-F181804','#r-F181802_1','#r-F181802_2'];
+                chkDisableT("#r-F181801_2", "#r-F181801_1", arr_F181801_2);
+                $( "#r-F181801_1" ).click( function() { 
+                    chkDisableT("#r-F181801_2", "#r-F181801_1", arr_F181801_2);
+                });
+                $( "#r-F181801_2" ).click( function() { 
+                    chkDisableT("#r-F181801_2", "#r-F181801_1", arr_F181801_2);
+                });
+                
+                if ($( "#r-F181802_1" ).is(":checked") == true) {
+                    $("#t-F181803").prop('disabled', false);
+                    $("#t-F181804").prop('disabled', true);
+                }
+                $( "#r-F181802_1" ).click( function() { 
+                    $("#t-F181803").prop('disabled', false);
+                    $("#t-F181804").prop('disabled', true);
+                });
+                
+                if ($( "#r-F181802_2" ).is(":checked") == true) {
+                    $("#t-F181803").prop('disabled', true);
+                    $("#t-F181804").prop('disabled', false);
+                }
+                $( "#r-F181802_2" ).click( function() { 
+                    $("#t-F181803").prop('disabled', true);
+                    $("#t-F181804").prop('disabled', false);
+                });
+                
+                
+            }
+    </script>
+</head>
+
+
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">14</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> JENIS ORGANISASI 
+                        <br/><span class="text-teal-400 font-size-sm"><i>TYPES OF ORGANISATION </i></span></h6>
+                        
+                </tr>
+            </table>
+           
+                
+                
+             <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                     <tr>
+                        <td>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    <span class="font-weight-semibold">TIDAK BERKENAAN /</span>  NOT APPLICABLE
+							    <br/> <span class="font-weight-semibold">Sila teruskan ke Soalan 15 /</span>  Please proceed to Question 15
+							    <br/> 
+						    </div>
+                        </td>
+                </tr>
+                    <!-- <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th style="width: 10%;">No Medan</th>
+                        <th class="text-center" style="width: 30%;">Nilai/ Value<i class="icon-arrow-down12" ></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    
+                
+                  
+	            <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">14.1</h6>
+                        </td>
+    
+                        <td>
+                             <div class="font-weight-semibold">Adakah pertubuhan ini beroperasi secara francais?</div>
+                            <span class="text-muted">Do this establishment operate as a franchise?</span>
+                            <br/><br/>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<span class="font-weight-semibold">Jika YA, sila ke Soalan 14.2</span> 
+								<br/>if YES, please go to Question 14.2
+						    </div>
+						    
+						     <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<span class="font-weight-semibold">Jika NO, sila ke Soalan Daya Saing</span> 
+								<br/>If NO, please go to Question Competitiveness
+						    </div>
+						    
+                        </td>
+                        <td>
+                             <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-xxxxxx">xxxxxx</a> <span class="text-danger"></span>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="xxxxxx" style="float:right;" title="Reset">
+                                <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya</div>
+                                    <span class="text-muted"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes</i></span>
+                                    <input type="radio" class="form-check-input-styled xxxxxx" id="r-Fxxxxxx_1" name="Fxxxxxx" value="1" {{#eq answers.Fxxxxxx '1'}}checked{{/eq}} required>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak</div>
+                                    <span class="text-muted"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</i></span>
+                                    <input type="radio" class="form-check-input-styled xxxxxx" id="r-Fxxxxxx_2" name="Fxxxxxx" value="2" {{#eq answers.Fxxxxxx '2'}}checked{{/eq}} required>
+                                </label>
+                            </div>    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">14.2</h6>
+                        </td>
+    
+                        <td>
+                             <div class="font-weight-semibold">Jika jawapan ialah "Ya", sila tandakan "X" dalam SATU KOTAK sahaja</div>
+                            <span class="text-muted"><i>If the answer is "Yes", please mark "X" in ONE BOX only</i></span>
+                        </td>
+                        <td>
+                             <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-xxxxxx">xxxxxx</a>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="xxxxxx" style="float:right;" title="Reset">
+                                    <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Francaisi (sila nyatakan yuran francaisi yang dibayar)</div>
+                                    <span class="text-muted"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Franchaisee (Please state franchise fee)</i></span>
+                                    <input type="radio" class="form-check-input-styled xxxxxx" id="r-Fxxxxxx_1" name="Fxxxxxx" value="1" {{#eq answers.Fxxxxxx '1'}}checked{{/eq}}>
+                                </label>
+                                
+                                <div class="text-default font-weight-semibold ml-3">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-xxxxxx">xxxxxx</a>
+                                </div>
+                                <div class="form-group form-group-feedback form-group-feedback-left ml-3">
+    								<input class="form-control only-number-pos" type="text" id="t-Fxxxxxx" name="Fxxxxxx" value="{{answers.Fxxxxxx}}" maxlength="12" disabled>
+    								<div class="form-control-feedback form-control-feedback-lg">
+    									RM
+    								</div>
+    							</div>
+                            </div>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Francaisor (sila nyatakan bilangan francaisi pertubuhan <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tuan)</div>
+                                    <span class="text-muted"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Franchaisor (please state the total numbers of your <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;franchisee)</i></span>
+                                    <input type="radio" class="form-check-input-styled xxxxxx" id="r-Fxxxxxx_2" name="Fxxxxxx" value="2" {{#eq answers.Fxxxxxx '2'}}checked{{/eq}}>
+                                </label>
+                                
+    							<div class="text-default font-weight-semibold ml-3">
+                                    <span class="badge badge-mark border-blue mr-1"></span>
+                                    <a class="ancor" id="a-xxxxxx">xxxxxx</a>
+                                </div>
+                                <div class="ml-3">
+    								<input class="form-control only-number-pos" type="text" id="t-Fxxxxxx" name="Fxxxxxx" value="{{answers.Fxxxxxx}}" maxlength="4" disabled>
+    							</div>
+                            </div>
+                        </td>
+                    </tr> -->
+                        </tbody>
+                        
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

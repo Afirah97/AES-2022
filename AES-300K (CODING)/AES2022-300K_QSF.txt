@@ -1,0 +1,3160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                columnDefs: [
+                    {
+                        orderable: false,
+                        targets: [5]
+                    },
+                    {
+                        width: "200px",
+                        targets: [0]
+                    },
+                    {
+                        width: "300px",
+                        targets: [1]
+                    },
+                    {
+                        width: "200px",
+                        
+                        targets: [5, 6]
+                    },
+                    {
+                        width: "100px",
+                        targets: [4]
+                    }
+                ],
+                scrollX: true,
+                scrollY: '350px',
+                scrollCollapse: true,
+                fixedColumns: true
+            });
+        });
+
+        
+        function initForm(){
+
+        //F.1
+        var trig_F340007 = "#c-F340007";
+                var arr_F340007 = ['#tx-F340008'];
+                chkDisableFRequiredT(trig_F340007, arr_F340007, arr_F340007);
+                $( trig_F340007 ).click( function() {
+                    chkDisableFRequiredT(trig_F340007, arr_F340007, arr_F340007);
+                    $('#tx-F340008').val('');
+                });
+                $("#c-F340007").click(function() {
+                    if ($(this).is(":checked")) {
+                        $("#tx-F340008").prop("readonly", false);
+                    } else {
+                        $("#tx-F340008").prop("readonly", true);
+                        $("#tx-F340008").val("");
+                    }
+                });
+                
+                
+           //F.10
+        var trig_F341707 = "#c-F341707";
+                var arr_F341707 = ['#tx-341708'];
+                chkDisableFRequiredT(trig_F341707, arr_F341707, arr_F341707);
+                $( trig_F341707 ).click( function() {
+                    chkDisableFRequiredT(trig_F341707, arr_F341707, arr_F341707);
+                    $('#tx-F341708').val('');
+                });
+                $("#c-F341707").click(function() {
+                    if ($(this).is(":checked")) {
+                        $("#tx-F341708").prop("readonly", false);
+                    } else {
+                        $("#tx-F341708").prop("readonly", true);
+                        $("#tx-F341708").val("");
+                    }
+                });     
+                
+        
+            //F.13
+        var arr_T330003 = ['F342001','F342002','F342003','F342004','F342005','F342006','F342007'];
+            calPercentage( arr_T330003, 'T330003' );
+            $( "#t-F342001" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F342002" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F342003" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F342004" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F342005" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F342006" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F342007" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+         
+        
+        }
+
+        
+        
+    </script>
+</head>
+
+<body>
+    <div class="card">
+
+    
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">F</div></button></td>
+                    <td><h6 class="text-teal-800">PERBELANJAAN PERLINDUNGAN ALAM SEKITAR<br/><span class="text-teal-400 font-size-sm">ENVIRONMENTAL PROTECTION EXPENDITURE</span></h6></td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+        </div>
+
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+
+                    <tr>
+                        <th style="width: 2%;">Seksyen<br><span class="text-muted">Section</span></th>
+                        <th>Keterangan<br><span class="text-muted">Description</span></th>
+                        <th style="width: 10%;">No Medan<br><span class="text-muted">Field No</span></th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                     <tr>
+                        <td class="text-center" rowspan="6">
+                            <h6 class="mb-0">F.1</h6>
+                        </td>
+                        <td rowspan="6">
+                            <div class="font-weight-semibold"> Sila nyatakan bagaimanakah pertubuhan ini mengurus sisa dan bahan pencemar? (Boleh pilih lebih daripada satu) </div>
+                            <span class="text-muted">Please indicate how this establishment manages waste and pollutants? (May choose more than one)</span>
+                             
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-340004">340004</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									   a) Pertubuhan melupuskannya sendiri 
+
+                                        <br/><span class="text-muted"> Dispose by the establishment itself</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F340004" name="F340004" value="1" {{#eq answers.F340004 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-340005">340005</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    b) Diuruskan oleh kontraktor yang dilantik
+
+                                        <br/><span class="text-muted"> Managed by the appointed contractor</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F340005" name="F340005" value="1" {{#eq answers.F340005 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-340006">340006</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    c) Menggunakan tong sampah awam 
+
+                                        <br/><span class="text-muted"> Using public bins</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F340006" name="F340006" value="1" {{#eq answers.F340006 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-340007">340007</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    d) Lain-lain : Nyatakan 
+                                        <br/><span class="text-muted"> Others : Specify</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F340007" name="F340007" value="1" {{#eq answers.F340007 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-340008">340008</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <textarea rows="3" class="form-control" id="tx-F340008" name="F340008" maxlength="250" readonly>{{answers.F340008}}</textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                      <tr> <!--Open QSC11 -->
+                      <td>
+                          
+                      </td>
+                      <td colspan="4">
+                          <div class="font-weight-semibold">Sila laporkan perbelanjaan bagi pengurusan pencemaran</div>
+                            <span class="text-muted">Please report the expenditure on pollution management</span>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.2</h6>
+                        </td>
+                        <td colspan="3">
+                            
+                            <div class="font-weight-semibold">Pengawasan alam sekitar</div>
+                            <span class="text-muted">Environmental monitoring</span>
+                            <br/><br/>
+                             <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                   
+                                    <span class="font-weight-semibold">Kos berkaitan perkakasan, pembekalan, buruh dan perkhidmatan yang dibeli dan digunakan bagi memenuhi peraturan atau konvensyen untuk mengawasi bahan cemar yang dilepaskan oleh pertubuhan.</span> 
+                                    <br/>Costs related to equipment, supplies, labor and purchased services that are used in response to or in anticipation of regulations or conventions requiring the monitoring of pollutants emitted by establishment.<br>
+                                    
+                                </div>
+                            
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>
+                                            <div class="font-weight-semibold">Media</div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Udara
+                						        <br/> <span class="text-muted">Air</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340101">340101</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340101" name="F340101" value="{{answers.F340101}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340201">340201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340201" name="F340201" value="{{answers.F340201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (b) Air permukaan
+                						        <br/> <span class="text-muted">Surface water</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340102">340102</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340102" name="F340102" value="{{answers.F340102}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>                                        
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340202">340202</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340202" name="F340202" value="{{answers.F340202}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (c) Tanah dan air bawah tanah
+                						        <br/> <span class="text-muted">Soil and groundwater</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340103">340103</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340103" name="F340103" value="{{answers.F340103}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340203">340203</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340203" name="F340203" value="{{answers.F340203}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (d) Bunyi, gegaran dan radiasi
+                						        <br/> <span class="text-muted">Noise, vibration and radiation</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340104">340104</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340104" name="F340104" value="{{answers.F340104}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340204">340204</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340204" name="F340204" value="{{answers.F340204}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                   
+ 
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+			         
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.3</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Peredaan dan kawalan pencemaran</div>
+                            <span class="text-muted">Pollution abatement and control</span>
+                            <br/><br/>
+                              <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                    
+                                    <span class="font-weight-semibold">Sebarang perbelanjaan bagi perkakasan dan kemudahan yang boleh dikenal pasti dan dipasang bagi mengekang atau mengurangkan pelepasan bahan pencemar. Termasuk juga yang berkaitan dengan implimentasi/operasi bagi pusat pembakaran atau tapak pelupusan yang dimiliki oleh pertubuhan. </span> 
+                                    <br/>Any expenditure for equipment or facilities which are seperately identifiable and which have been installed exclusively to prevent or to reduce emission of pollutants. Expenditure related to the implementation/ operation of an incinerator centre or landfill site owned by establishment is also included. <br>
+                                    
+                                </div>
+                            
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>
+                                            <div class="font-weight-semibold">Media</div></div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Udara
+                						        <br/> <span class="text-muted">Air</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340301">340301</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340301" name="F340301" value="{{answers.F340301}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340401">340401</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340401" name="F340401" value="{{answers.F340401}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (b) Air permukaan
+                						        <br/> <span class="text-muted">Surface water</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340302">340302</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340302" name="F340302" value="{{answers.F340302}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>                                        
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340402">340402</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340402" name="F340402" value="{{answers.F340402}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (c) Tanah dan air bawah tanah
+                						        <br/> <span class="text-muted">Soil and groundwater</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340303">340303</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340303" name="F340303" value="{{answers.F340303}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340403">340403</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340403" name="F340403" value="{{answers.F340403}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (d) Bunyi, gegaran dan radiasi
+                						        <br/> <span class="text-muted">Noise, vibration and radiation</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340304">340304</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340304" name="F340304" value="{{answers.F340304}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340404">340404</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340404" name="F340404" value="{{answers.F340404}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.4</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Pencegahan pencemaran</div>
+                            <span class="text-muted">Pollution prevention</span>
+                            <br/><br/>
+                              <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                   
+                                    <span class="font-weight-semibold">Penggunaan teknologi, peralatan atau proses yang mengurangkan atau menghapuskan pencemaran dan sisa yang bukan pada punca hujung-paip atau timbunan sebelum pencemaran atau bahan buangan terhasil. </span> 
+                                    <br/>Use of technologies, equipment or processes that reduce or eliminate pollution and waste at the source instead of at the end-of-pipe or stack before the pollution or waste is created.<br>
+                                    
+                                </div>
+                            
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>
+                                            <div class="font-weight-semibold">Media</div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                      
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Udara
+                						        <br/> <span class="text-muted">Air</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340501">340501</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340501" name="F340501" value="{{answers.F340501}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340601">340601</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340601" name="F340601" value="{{answers.F340601}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (b) Air permukaan
+                						        <br/> <span class="text-muted">Surface water</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340502">340502</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340502" name="F340502" value="{{answers.F340502}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>                                        
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340602">340602</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340602" name="F340602" value="{{answers.F340602}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (c) Tanah dan air bawah tanah
+                						        <br/> <span class="text-muted">Soil and groundwater</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340503">340503</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340503" name="F340503" value="{{answers.F340503}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340603">340603</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340603" name="F340603" value="{{answers.F340603}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (d) Bunyi, gegaran dan radiasi
+                						        <br/> <span class="text-muted">Noise, vibration and radiation</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340504">340504</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340504" name="F340504" value="{{answers.F340504}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340604">340604</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340604" name="F340604" value="{{answers.F340604}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.5</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Tebus guna dan pembersihan tapak</div>
+                            <span class="text-muted">Site reclamation and decomissioning</span>
+                            <br/><br/>
+                                    <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                   
+                                    <span class="font-weight-semibold">Perbelanjaan bagi aktiviti pembersihan dan pemulihan kerosakan alam sekitar yang disebabkan oleh operasi pertubuhan tidak termasuk penalti atau kompaun yang dikenakan kerana kerosakan alam sekitar atau sebarang tanggungan kepada alam sekitar pada masa hadapan.</span> 
+                                    <br/>Expenditure of clean-up and recovery activities for the environmental damage resulting from any establishment's operations and decommissioning expenditure but excludes penalty or compound due to environmental damage or any provision for future environmental liability.<br>
+                                    
+                                </div>
+                            
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th>
+                                            <div class="font-weight-semibold">Media</div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Udara
+                						        <br/> <span class="text-muted">Air</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340701">340701</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340701" name="F340701" value="{{answers.F340701}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340801">340801</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340801" name="F340801" value="{{answers.F340801}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (b) Air permukaan
+                						        <br/> <span class="text-muted">Surface water</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340702">340702</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340702" name="F340702" value="{{answers.F340702}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>                                        
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340802">340802</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340802" name="F340802" value="{{answers.F340802}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (c) Tanah dan air bawah tanah
+                						        <br/> <span class="text-muted">Soil and groundwater</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340703">340703</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340703" name="F340703" value="{{answers.F340703}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340803">340803</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F340803" name="F340803" value="{{answers.F340803}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                    
+                                        <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.6</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Sila laporkan perbelanjaan pengurusan sisa</div>
+                            <span class="text-muted">Please report the expenditure on waste management</span>
+                            <br/><br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th style="width:32.5%">
+                                            <div class="font-weight-semibold">Media</div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                      
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Perbelanjaan pengurusan sisa
+                						        <br/> <span class="text-muted">The expenditure on waste management</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-340901">340901</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F340901" name="F340901" value="{{answers.F340901}}" maxlength="9"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-341001">341001</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F341001" name="F341001" value="{{answers.F341001}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr> 
+                    
+                    
+                                        <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.7</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Perbelanjaan penilaian & audit alam sekitar dan caj alam sekitar</div>
+                            <span class="text-muted">Environmental assesment & audits expenditure and environmental charges </span>
+                            <br/><br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th style="width:32.5%">
+                                            <div class="font-weight-semibold">Media</div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Perbelanjaan penilaian & audit alam sekitar dan caj alam sekitar
+                						        <br/> <span class="text-muted">Environmental assesment & audits expenditure and environmetal charges </span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-341101">341101</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F341101" name="F341101" value="{{answers.F341101}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-341201">341201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F341201" name="F341201" value="{{answers.F341201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr> 
+                    
+                                        <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.8</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Perbelanjaan bagi melindungi hidupan liar dan habitat dari mana-mana kesan operasi pertubuhan</div>
+                            <span class="text-muted">Expenditure to protect wildlife and habitat from the effects of any establishment's operation</span>
+                            <br/><br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center" >
+                                    <tr>
+                                        <th style="width:32.5%">
+                                            <div class="font-weight-semibold">Media</div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Perbelanjaan bagi melindungi hidupan liar dan habitat dari mana-mana kesan operasi pertubuhan 
+                						        <br/> <span class="text-muted">Expenditure to protect wildlife and habitat from the effects of any establishment's operation</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-341301">341301</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F341301" name="F341301" value="{{answers.F341301}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-341401">341401</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F341401" name="F341401" value="{{answers.F341401}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr> 
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.9</h6>
+                        </td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Lain-lain perbelanjaan alam sekitar</div>
+                            <span class="text-muted">Other environmental expenditure</span>
+                            <br/><br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th style="width:32.5%">
+                                            <div class="font-weight-semibold">Media</div>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Lain-lain perbelanjaan alam sekitar
+                						        <br/> <span class="text-muted">Other environmental expenditure</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-341501">341501</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F341501" name="F341501" value="{{answers.F341501}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-341601">341601</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F341601" name="F341601" value="{{answers.F341601}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                      
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                     
+                     <tbody>
+                    <tr>
+                        <td class="text-center" width="4%" rowspan="10">
+                            <h6 class="mb-0">F.10</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="10">
+                            <div class="font-weight-semibold">
+                                Adakah pertubuhan ini mempunyai pensijilan alam sekitar ? (Boleh pilih lebih daripada satu)
+                            </div>
+                            <span class="text-muted">
+                                Does your establishment have environmental certifications? (May choose more than one)
+                            </span>
+                            <br/><br/>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold" >
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341701">341701</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                           (a) ISO 14001 <!-- : Sistem Pengurusan Alam Sekitar
+                                        <br/><span class="text-muted">Environmental Management System</span> -->
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F341701" name="F341701" value="1" {{#eq answers.F341701 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341702">341702</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) ISO 14004 <!-- : Panduan pelaksanaan, penyelenggaraan dan peningkatan sistem pengurusan alam sekitar
+                                        <br/><span class="text-muted">Guidance on he implementation, maintenance and improvement of an environmental management</span> -->
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F341702" name="F341702" value="1" {{#eq answers.F341702 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341703">341703</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) ISO 14064 <!-- : Gas rumah hijau 
+                                        <br/><span class="text-muted">Greenhouse gases</span> -->
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F341703" name="F341703" value="1" {{#eq answers.F341703 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341704">341704</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) RSPO/MSPO <!-- : Pensijilan Minyak Sawit Mampan 
+                                        <br/><span class="text-muted">Malaysian Sustainable Palm Oil Certification</span> -->
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F341704" name="F341704" value="1" {{#eq answers.F341704 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341705">341705</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) MTCS <!-- : Skim Pensijilan Perkayuan Malaysia
+                                        <br/><span class="text-muted">Malaysian Timber Certification Scheme</span> -->
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F341705" name="F341705" value="1" {{#eq answers.F341705 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341706">341706</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) FSC <!-- : Majlis Pengawasan Hutan
+                                        <br/><span class="text-muted">Forest Stewardship Council</span> -->
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F341706" name="F341706" value="1" {{#eq answers.F341706 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481007">341707</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Lain-lain pensijilan berkaitan alam sekitar (sila nyatakan)
+                                        <br/><span class="text-muted">Other environmental certification (please specify)</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F341707" name="F341707" value="1" {{#eq answers.F341707 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341708">341708</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <textarea rows="3" class="form-control" id="tx-F341708" name="F341708" maxlength="250" readonly>{{answers.F341708}}</textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341709">341709</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (h) Tiada
+                                        <br/><span class="text-muted">None</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F341709" name="F341709" value="1" {{#eq answers.F341709 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                     
+                     <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">F.11</h6>
+                        </td>
+    
+                         <td rowspan="2">
+                            <div class="font-weight-semibold">Adakah pertubuhan ini mengeluarkan Laporan Kelestarian?</div>
+                            <span class="text-muted">Does your establishment publish the Sutainability Reports?</span>
+                            <br/><br/>
+                        </td>
+    
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-341801">341801</a> <span class="text-danger">*</span>
+                                <!--<button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="341801" style="float:right;" title="Reset">
+                                    <i class="icon-undo"></i>
+                                </button>-->
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes</span>
+                                    <input type="radio" class="form-check-input-styled 341801" id="r-F341801_1" name="F341801" value="1" {{#eq answers.F481101 '1'}}checked{{/eq}}>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</span>
+                                    <input type="radio" class="form-check-input-styled 341801" id="r-F341801_2" name="F341801" value="2" {{#eq answers.F481101 '2'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                     
+                     <tbody>
+                         
+                    <tr>
+                        <td class="text-center" rowspan="3">
+                            <h6 class="mb-0">F.12</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila nyatakan penggunaan bahan kitar semula sebagai input pengeluaran  </div>
+                            <span class="text-muted">Please indicate of use of recycled materials as production input</span>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <div class="font-weight-semibold">Nilai</div>
+                            <span class="text-muted">Value</span>
+                        </td>
+                        
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <a class="ancor" id="a-341901">341901</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-left">
+								<input class="form-control only-number-neg" type="text" id="t-F341901" name="F341901" value="{{answers.F341901}}" maxlength="10">
+								<div class="form-control-feedback form-control-feedback-lg">RM</div>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td>
+                            <div class="font-weight-semibold">Kuantiti (tan metrik)</div>
+                            <span class="text-muted">Quantity (tonnes)</span>
+                        </td>
+                        
+                    
+                        <td class="noborder-top">
+                            <div class="text-default font-weight-semibold">
+                                <a class="ancor" id="a-341902">341902</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td class="noborder-top">
+                            <input class="form-control" type="text" id="t-F341902" name="F341902" value="{{answers.F341902}}" maxlength="9" required>
+                        </td>
+                    </tr>
+
+               
+                     
+                    <tbody>
+                    <tr>
+                        <td class="text-center" rowspan="10">
+                            <h6 class="mb-0">F.13</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Berdasarkan F.12, sila nyatakan peratus penggunaan bahan kitar semula mengikut jenis</div>
+                            <span class="text-muted">Refer to F.12, please indicate percentage of use of recycled materials by type</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(a)  Plastik</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Plastics</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-342001">342001</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F342001" name="F342001" value="{{answers.F342001}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(b)  Kertas</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Paper</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-342002">342002</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F342002" name="F342002" value="{{answers.F342002}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(c)  Besi</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Metal</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-342003">342003</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F342003" name="F342003" value="{{answers.F342003}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(d)  Kaca</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Glass</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-deffault font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-342004">342004</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F342004" name="F342004" value="{{answers.F342004}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(e)  Tekstil</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Textiles</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-342005">342005</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F342005" name="F342005" value="{{answers.F342005}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(f)  Getah</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rubber</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-342006">342006</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F342006" name="F342006" value="{{answers.F342006}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(g)  Lain-lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Others</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-342007">342007</a> <!--<span class="text-danger">*</span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-right only-number-pos" type="text" maxlength="3" id="t-F342007" name="F342007" value="{{answers.F342007}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+
+                   <tr>
+                        <td>
+                            
+                            <div class="font-weight-semibold" >JUMLAH</div>
+                            <span class="text-muted">TOTAL</span>
+                            
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-right only-number-pos" type="text" id="t-T330003" name="T330003" readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>                    
+                    </tr> 
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                       
+                       
+                        
+                    
+                     
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+        $(function () {
+            // Left fixed column example
+            $('.datatable-fixed-left').DataTable({
+                columnDefs: [
+                    {
+                        orderable: false,
+                        targets: [5]
+                    },
+                    {
+                        width: "200px",
+                        targets: [0]
+                    },
+                    {
+                        width: "300px",
+                        targets: [1]
+                    },
+                    {
+                        width: "200px",
+                        
+                        targets: [5, 6]
+                    },
+                    {
+                        width: "100px",
+                        targets: [4]
+                    }
+                ],
+                scrollX: true,
+                scrollY: '350px',
+                scrollCollapse: true,
+                fixedColumns: true
+            });
+        });
+
+        
+        function initForm(){
+
+        // D1
+        // var arr_F340001_2 = ['#t-F480101','#t-F480102','#t-F480103','#t-F480104','#t-F480109'];
+        // chkDisableT("#r-F340001_2", "#r-F340001_1", arr_F340001_2);
+        // $( "#r-F340001_1" ).click( function() { 
+        //     chkDisableT("#r-F340001_2", "#r-F340001_1", arr_F340001_2);
+        // });
+        // $( "#r-F340001_2" ).click( function() { 
+        //     chkDisableT("#r-F340001_2", "#r-F340001_1", arr_F340001_2);
+        // });
+        
+         //readonly
+         //F.2
+            // $( "input#t-F482109" ).prop( "readonly" , true);
+            // $( "input#t-F482209" ).prop( "readonly" , true);
+            // $( "input#t-F482901" ).prop( "readonly" , true);
+            // $( "input#t-F482902" ).prop( "readonly" , true);
+            // $( "input#t-F482903" ).prop( "readonly" , true);
+            // $( "input#t-F482904" ).prop( "readonly" , true);
+            // $( "input#t-F482909" ).prop( "readonly" , true);
+        
+        
+
+            
+        // D2
+        // var arr_T340001 = ['F480104','F480109'];
+        // calPercentage( arr_T340001, 'T340001' );
+        // $( "#t-F480104" ).blur( function() { calPercentage( arr_T340001, 'T340001' ); });
+        // $( "#t-F480109" ).blur( function() { calPercentage( arr_T340001, 'T340001' ); });
+        
+        
+        var arr_T330003 = ['F481303','F481304','F481305','F481306','F481307','F481308','F481309'];
+            calPercentage( arr_T330003, 'T330003' );
+            $( "#t-F481303" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F481304" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F481305" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F481306" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F481307" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F481308" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+            $( "#t-F481309" ).blur( function() { calPercentage( arr_T330003, 'T330003' ); });
+         
+        
+        }
+
+        
+        
+    </script>
+</head>
+
+<body>
+    <div class="card">
+
+    
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">F</div></button></td>
+                    <td><h6 class="text-teal-800">PERBELANJAAN PERLINDUNGAN ALAM SEKITAR<br/><span class="text-teal-400 font-size-sm">ENVIRONMENTAL PROTECTION EXPENDITURE</span></h6></td>
+                    <td style="width:100px">
+                        <div class="text-default font-weight-semibold text-center">
+                                <a class="ancor" id="a-120101">NG</a>
+                            </div>
+                        <div>
+								<input class="form-control" type="text" id="a-120201" name="A120201" value="{{answers.A120201}}" maxlength="2">
+							</div></td>
+							<td style="width:150px">
+							    <div class="text-default font-weight-semibold text-center">
+                                <a class="ancor" id="a-120101">NO. BATCH</a>
+                            </div>
+							    <div>
+								<input class="form-control only-number-pos" type="text" id="a-120201" name="A120201" value="{{answers.A120201}}" maxlength="4">
+							</div></td>
+							<td style="width:100px">
+							    <div class="text-default font-weight-semibold text-center">
+                                <a class="ancor" id="a-120101">BIL</a>
+                            </div>
+							    <div>
+								<input class="form-control only-number-pos" type="text" id="a-120201" name="A120201" value="{{answers.A120201}}" maxlength="2">
+							</td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+        </div>
+
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+
+                    <tr>
+                        <th style="width: 2%;">Seksyen<br><span class="text-muted">Section</span></th>
+                        <th>Keterangan<br><span class="text-muted">Description</span></th>
+                        <th style="width: 20%;">No Medan<br><span class="text-muted">Field No</span></th>
+                        <th class="text-center" style="width: 20%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                     <tr>
+                        <td class="text-center" rowspan="5">
+                            <h6 class="mb-0">F.1</h6>
+                        </td>
+                        <td rowspan="5">
+                            <div class="font-weight-semibold"> Sila nyatakan bagaimanakah pertubuhan ini mengurus sisa dan bahan pencemar? (Boleh pilih lebih daripada satu) </div>
+                            <span class="text-muted">Please indicate how this establishment manages waste and pollutants? (May choose more than one)</span>
+                             
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-480101">480101</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									   a) Pertubuhan melupuskannya sendiri 
+
+                                        <br/><span class="text-muted"> Dispose by the establishment itself</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F480101" name="F480101" value="1" {{#eq answers.F480101 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-480102">480102</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    b) Diuruskan oleh kontraktor yang dilantik
+
+                                        <br/><span class="text-muted"> Managed by the appointed contractor</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F480102" name="F480102" value="1" {{#eq answers.F480102 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-480103">480103</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    c) Menggunakan tong sampah awam 
+
+                                        <br/><span class="text-muted"> Using public bins</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F480103" name="F480103" value="1" {{#eq answers.F480103 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-480104">480104</a>
+                            </div>
+                        </td>
+                        <td>
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+									    d) Lain-lain : Nyatakan 
+
+                                        <br/><span class="text-muted"> Others : Specify</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-480104" name="F480104" value="1" {{#eq answers.F480104 '1'}}checked{{/eq}}></span>
+								<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-480109">480109</a>
+                            </div>
+                             <div>
+                                <textarea rows="3" class="form-control" id="tx-F480109" name="F480109" maxlength="250" >{{answers.F480109}}</textarea>
+                            </div>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                         <td class="text-center" rowspan="1">
+            
+                        </td>
+                        <td>
+                        
+                            <div class="font-weight-semibold">Sila laporkan perbelanjaan pengurusan pencemaran</div>
+                            <span class="text-muted">Please report the expenditure of pollution management</span>
+                            <br/><br/>
+                        </td>
+                    </tr>
+                    
+                      <tr> <!--Open QSC11 -->
+                        
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.2</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Pengawasan alam sekitar</div>
+                            <span class="text-muted">Environmental monitoring</span>
+                            <br/><br/>
+                             <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                    <span class="font-weight-semibold">Nota /</span> Notes:<br>
+                                    <span class="font-weight-semibold">Kos berkaitan perkakasan, pembekalan, buruh dan perkhidmatan yang dibeli dan digunakan bagi memenuhi peraturan atau konvensyen untuk mengawasi bahan cemar yang dilepaskan oleh pertubuhan.</span> 
+                                    <br/>Costs related to equipment, supplies, labor and purchased services that are used in response to or in anticipation of regulations or conventions requiring the monitoring of pollutants emitted by establishment.<br><br>
+                                    
+                                </div>
+                            
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Udara
+                						        <br/> <span class="text-muted">Air</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-482101">482101</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F482101" name="F482101" value="{{answers.F482101}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-482201">482201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F482201" name="F482201" value="{{answers.F482201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (b) Air permukaan
+                						        <br/> <span class="text-muted">Surface water</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-482102">482102</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-482102" name="F482102" value="{{answers.F482102}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-482202">482202</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F482202" name="F482202" value="{{answers.F482202}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (c) Tanah dan air bawah tanah
+                						        <br/> <span class="text-muted">Soil and groundwater</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-482103">482103</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F482103" name="F482103" value="{{answers.F482103}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-482203">482203</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F482203" name="F482203" value="{{answers.F482203}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (d) Bunyi, gegaran dan radiasi
+                						        <br/> <span class="text-muted">Noise, vibration and radiation</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-482104">482104</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F482104" name="F482104" value="{{answers.F482104}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-482204">482204</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F482204" name="F482204" value="{{answers.F482204}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                   
+ 
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+			         
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.3</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Peredaan dan kawalan pencemaran</div>
+                            <span class="text-muted">Pollution abatement and control</span>
+                            <br/><br/>
+                              <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                    <span class="font-weight-semibold">Nota /</span> Notes:<br>
+                                    <span class="font-weight-semibold">Sebarang perbelanjaan bagi perkakasan dan kemudahan yang boleh dikenalpasti dan dipasang bagi mengekang atau mengurangkan pelepasan bahan pencemar. Termasuk juga yang berkaitan dengan implimentasi/operasi bagi pusat pembakaran atau tapak pelupusan yang dimiliki oleh pertubuhan. </span> 
+                                    <br/>Any expenditure for equipment or facilities which are seperately identifiable and which have been installed exclusively to prevent or to reduce emission of pollutants. Expenditure related to the implementation/ operation of an incinerator centre or landfill site owned by establishment is also included. <br><br>
+                                    
+                                </div>
+                            
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                         <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Udara
+                						        <br/> <span class="text-muted">Air</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-483101">483101</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F483101" name="F483101" value="{{answers.F483101}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-483201">483201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F483201" name="F483201" value="{{answers.F483201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (b) Air permukaan
+                						        <br/> <span class="text-muted">Surface water</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-483102">483102</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F483102" name="F483102" value="{{answers.F483102}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-483202">483202</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F483202" name="F483202" value="{{answers.F483202}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (c) Tanah dan air bawah tanah
+                						        <br/> <span class="text-muted">Soil and groundwater</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-483103">483103</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F483103" name="F483103" value="{{answers.F483103}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-483203">483203</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F483203" name="F483203" value="{{answers.F483203}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (d) Bunyi, gegaran dan radiasi
+                						        <br/> <span class="text-muted">Noise, vibration and radiation</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-483104">483104</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F483104" name="F483104" value="{{answers.F483104}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-483204">483204</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F483204" name="F483204" value="{{answers.F483204}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.4</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Pencegahan pencemaran</div>
+                            <span class="text-muted">Pollution prevention</span>
+                            <br/><br/>
+                              <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                    <span class="font-weight-semibold">Nota /</span> Notes:<br>
+                                    <span class="font-weight-semibold">Penggunaan teknologi, peralatan atau proses yang mengurangkan atau menghapuskan pencemaran dan sisa yang bukan pada punca hujung-paip atau timbunan sebelum pencemaran atau bahan buangan terhasil. </span> 
+                                    <br/>Use of technologies, equipment or processes that reduce or eliminate pollution and waste at the source instead of at the end-of-pipe or stack before the pollution or waste is created.<br><br>
+                                    
+                                </div>
+                            
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                      
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                         <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Udara
+                						        <br/> <span class="text-muted">Air</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-484101">484101</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F484101" name="F484101" value="{{answers.F484101}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-484201">484201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F484201" name="F484201" value="{{answers.F484201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (b) Air permukaan
+                						        <br/> <span class="text-muted">Surface water</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-484102">484102</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F484102" name="F484102" value="{{answers.F484102}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-484202">484202</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F484202" name="F484202" value="{{answers.F484202}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (c) Tanah dan air bawah tanah
+                						        <br/> <span class="text-muted">Soil and groundwater</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-484103">484103</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F484103" name="F484103" value="{{answers.F484103}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-484203">484203</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F484203" name="F484203" value="{{answers.F484203}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (d) Bunyi, gegaran dan radiasi
+                						        <br/> <span class="text-muted">Noise, vibration and radiation</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-484104">484104</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F484104" name="F484104" value="{{answers.F484104}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-484204">484204</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F484204" name="F484204" value="{{answers.F484204}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.5</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Tebus guna dan pembersihan tapak</div>
+                            <span class="text-muted">Site reclamation and decomissioning</span>
+                            <br/><br/>
+                                    <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                                    <!--<button type="button" class="close" data-dismiss="alert"><span>×</span></button>-->
+                                    <span class="font-weight-semibold">Nota /</span> Notes:<br>
+                                    <span class="font-weight-semibold">Perbelanjaan bagi aktiviti pembersihan dan pemulihan kerosakan alam sekitar yang disebabkan oleh operasi pertubuhan tidak termasuk penalti atau kompaun yang dikenakan kerana kerosakan alam sekitar atau sebarang tanggungan kepada alam sekitar pada masa hadapan.</span> 
+                                    <br/>Expenditure of clean-up and recovery activities for the environmental damage resulting from any establishment's operations and decommissioning expenditure but excludes penalty or compound due to environmental damage or any provision for future environmental liability.<br><br>
+                                    
+                                </div>
+                            
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                         <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (a) Udara
+                						        <br/> <span class="text-muted">Air</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-485101">485101</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F485101" name="F485101" value="{{answers.F485101}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-485201">485201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F485201" name="F485201" value="{{answers.F485201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (b) Air permukaan
+                						        <br/> <span class="text-muted">Surface water</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-485102">485102</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F485102" name="F485102" value="{{answers.F485102}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-485202">485202</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F485202" name="F485202" value="{{answers.F485202}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    <div class="font-weight-semibold p-custom-1">
+                						        (c) Tanah dan air bawah tanah
+                						        <br/> <span class="text-muted">Soil and groundwater</span>
+                						    </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-485103">485103</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F485103" name="F485103" value="{{answers.F485103}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-485203">485203</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F485203" name="F485203" value="{{answers.F485203}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                      
+                                    </tr>
+                                    <tr>
+                			           
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.6</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila laporkan perbelanjaan pengurusan sisa</div>
+                            <span class="text-muted">Please report the expenditure on waste management</span>
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                      
+                                    </tr>
+                                </thead>
+                                <br/>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-486101">486101</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F486101" name="F486101" value="{{answers.F486101}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-486201">486201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F486201" name="F486201" value="{{answers.F486201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr> 
+                    
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.7</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Perbelanjaan penilaian & audit alam sekitar dan caj alam sekitar</div>
+                            <span class="text-muted">Environmental assesment & audits expenditure and environmental charges </span>
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                    
+                                    </tr>
+                                </thead>
+                                <br/>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						   
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-487101">487101</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F487101" name="F487101" value="{{answers.F487101}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-487201">487201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F487201" name="F487201" value="{{answers.F487201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr> 
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.8</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Perbelanjaan bagi melindungi hidupan liar dan habitat dari mana-mana kesan operasi pertubuhan</div>
+                            <span class="text-muted">Expenditure to protect wildlife and habitat from the effects of any establishment's operation</span>
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <br/>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						   
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-488101">488101</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F488101" name="F488101" value="{{answers.F488101}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-488201">488201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F488201" name="F488201" value="{{answers.F488201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr> 
+                    
+                    <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.9</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Lain-lain perbelanjaan alam sekitar</div>
+                            <span class="text-muted">Other environmental expenditure</span>
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan modal</div>
+                                            <span class="text-muted">Capital expenditure</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Perbelanjaan operasi</div>
+                                            <span class="text-muted">Operating expenditure</span>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <br/>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-489101">489101</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F489101" name="F489101" value="{{answers.F489101}}" maxlength="6"> 
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-489201">489201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F489201" name="F489201" value="{{answers.F489201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                      
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        
+                    </tr>
+                     
+                     <tbody>
+                    <tr>
+                        <td class="text-center" width="4%" rowspan="10">
+                            <h6 class="mb-0">F.10</h6>
+                            <div class="font-size-sm text-muted line-height-1"></div>
+                        </td>
+                        <td rowspan="10">
+                            <div class="font-weight-semibold">
+                                Adakah pertubuhan ini mempunyai pensijilan alam sekitar? (Jawapan berganda boleh diterima)
+                            </div>
+                            <span class="text-muted">
+                                Does this establishment have environmental certifications? (Multiple answers accepted)
+                            </span>
+                            <br/><br/>
+                            
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold" >
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481001">481001</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                           (a) ISO 14001
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F481001" name="F481001" value="1" {{#eq answers.F481001 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481002">481002</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (b) ISO 14004
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F481002" name="F481002" value="1" {{#eq answers.F481002 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481003">481003</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (c) ISO 14064
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F481003" name="F481003" value="1" {{#eq answers.F481003 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481004">481004</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (d) RSPO / MSPO
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F481004" name="F481004" value="1" {{#eq answers.F481004 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481005">481005</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (e) MTCS
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F481005" name="F481005" value="1" {{#eq answers.F481005 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481006">481006</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (f) FSC
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F481006" name="F481006" value="1" {{#eq answers.F481006 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481007">481007</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (g) Lain-lain pensijilan berkaitan alam sekitar. Sila nyatakan
+                                        <br/><span class="text-muted">Other environmental certification.Please specify</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F481007" name="F481007" value="1" {{#eq answers.F481007 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+							<div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481008">481008</a>
+                            </div>
+                             <div>
+                                <textarea rows="3" class="form-control" id="tx-F481008" name="F481008" maxlength="250" >{{answers.F481008}}</textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481099">481099</a>
+                            </div>
+                        </td> 
+                        <td class="noborder-top">
+							<div class="form-check form-check-right">
+								<label class="form-check-label">
+									<div class="font-weight-semibold p-custom-1">
+                                            (h) Tiada
+                                        <br/><span class="text-muted">None</span>
+                                    </div>
+									<span><input type="checkbox" class="form-check-input-styled" id="c-F481099" name="F481099" value="1" {{#eq answers.F481099 '1'}}checked{{/eq}}></span>
+								</label>
+							</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                     
+                     <tr>
+                        <td class="text-center">
+                            <h6 class="mb-0">F.11</h6>
+                        </td>
+    
+                         <td rowspan="2">
+                            <div class="font-weight-semibold">Adakah pertubuhan ini mengeluarkan Laporan Kelestarian?</div>
+                            <span class="text-muted">Does this establishment publish the Sustainability Reports?</span>
+                            <br/><br/>
+                        </td>
+    
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481101">481101</a>
+                                <button type="button" class="btn btn-outline bg-danger-400 border-danger-400 text-danger-800 btn-icon rounded-round border-2 b_reset" data-val="020002" style="float:right;" title="Reset">
+                                    <i class="icon-undo"></i>
+                                </button>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">1 &nbsp;&nbsp;Ya</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yes</span>
+                                    <input type="radio" class="form-check-input-styled 481101" id="r-F481101_1" name="F481101" value="1" {{#eq answers.F481101 '1'}}checked{{/eq}}>
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-right">
+                                <label class="form-check-label">
+                                    <div class="font-weight-semibold">2 &nbsp;&nbsp;Tidak</div>
+                                    <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No</span>
+                                    <input type="radio" class="form-check-input-styled 481101" id="r-F481101_2" name="F481101" value="2" {{#eq answers.F481101 '2'}}checked{{/eq}}>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                     
+                     <tbody>
+                     <tr> <!--Open QSC11 -->
+                        <td class="text-center" rowspan="1">
+                            <h6 class="mb-0" >F.12</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Sila nyatakan penggunaan bahan kitar semula sebagai input pengeluaran</div>
+                            <span class="text-muted">Please indicate of use of recycled materials as production input</span>
+                            <br/>
+                            <table class="table table-bordered ">
+                                <thead class="text-center">
+                                    <tr>
+                                        <th class="first-child-col text-left"></th>
+                                        <th>
+                                            <div class="font-weight-semibold">Nilai</div>
+                                            <span class="text-muted">Value</span>
+                                        </th>
+                                        <th>
+                                            <div class="font-weight-semibold">Kuantiti (tan metrik)</div>
+                                            <span class="text-muted">Quantity (tonnes)</span>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <br/>
+                                <tbody>
+                                    <tr>
+                			            <td class="first-child-col">
+                						    
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-481201">481201</a>
+                                            </div>
+                                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                                <input class="form-control only-number-pos" type="text" id="t-F481201" name="F481201" value="{{answers.F481201}}" maxlength="9">
+                                                <div class="form-control-feedback form-control-feedback-lg">
+                                                    RM
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-481202">481202</a>
+                                            </div>
+                                            <input class="form-control only-number-pos" type="text" id="t-F481202" name="F481202" value="{{answers.F481202}}" maxlength="6"> 
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+               
+                     
+                    <tbody>
+                    <tr>
+                        <td class="text-center" rowspan="10">
+                            <h6 class="mb-0">F.13</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Berdasarkan F12, sila nyatakan peratus penggunaan mengikut jenis</div>
+                            <span class="text-muted">Refer to F12, please indicate per cent of use of recycled by type</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(a)  Plastik</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Plastics</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481303">481303</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-left only-number-pos" type="text" maxlength="3" id="t-F481303" name="F481303" value="{{answers.F481303}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(b)  Kertas</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Paper</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481304">481304</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-left only-number-pos" type="text" maxlength="3" id="t-F481304" name="F481304" value="{{answers.F481304}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(c)  Besi</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Metal</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481305">481305</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-left only-number-pos" type="text" maxlength="3" id="t-F481305" name="F481305" value="{{answers.F481305}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(d)  Kaca</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Glass</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-deffault font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481306">481306</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-left only-number-pos" type="text" maxlength="3" id="t-F481306" name="F481306" value="{{answers.F481306}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(e)  Tekstil</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Textiles</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481307">481307</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-left only-number-pos" type="text" maxlength="3" id="t-F481307" name="F481307" value="{{answers.F481307}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(f)  Getah</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rubber</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481308">481308</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-left only-number-pos" type="text" maxlength="3" id="t-F481308" name="F481308" value="{{answers.F481308}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+                   
+                   <tr>
+
+                        <td>
+                            <div class="font-weight-semibold">(g)  Lain-lain</div>
+                            <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Others</span>
+                            <br/><br/>
+                        </td>
+                        
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-481309">481309</a> <span class="text-danger">*</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group-feedback form-group-feedback-right">
+								<input class="form-control text-left only-number-pos" type="text" maxlength="3" id="t-F481309" name="F481309" value="{{answers.F481309}}">
+								<div class="form-control-feedback form-control-feedback-lg">%</div>
+							</div>
+                        </td>
+                    </tr>
+
+                   <tr>
+                        <td>
+                            
+                            <div class="font-weight-semibold" >JUMLAH</div>
+                            <span class="text-muted">TOTAL</span>
+                            
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="form-group form-group-feedback form-group-feedback-right">
+                                <input class="form-control text-left only-number-pos" type="text" id="t-T330003" name="T330003" readonly>
+                                <div class="form-control-feedback form-control-feedback-lg">%</div>
+                            </div>
+                        </td>                    
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

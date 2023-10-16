@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   
+    <script type="text/javascript">
+        // $(function() {
+        //     //autocalculate (sumofarray, fieldofsum, minvalue, maxvalue)
+        //     //total F127017
+           
+            
+        // });
+        
+        function initForm()
+        {
+                    var arr_F127017 = ['F127001','F127002','F127003','F127004','F127005','F127006','F127007','F127008','F127009','F127010','F127011','F127012','F127013','F127014','F127015','F127016'];
+                    autoCalculate( arr_F127017, 'F127017', 1, 999999999999 );
+                    $( "#t-F127001" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127002" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127003" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127004" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127005" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127006" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127007" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127008" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127009" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127010" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127011" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127012" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127013" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127014" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127015" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    $( "#t-F127016" ).blur( function() { autoCalculate( arr_F127017, 'F127017', 1, 999999999999 ); });
+                    
+                    //total F127117
+                    var arr_F127117 = ['F127120','F127101','F127102','F127103','F127104','F127105','F127106','F127107','F127108','F127109','F127110','F127111','F127112','F127113','F127114','F127115','F127116'];
+                    autoCalculate( arr_F127117, 'F127117', 1, 999999999999 );
+                    $( "#t-F127120" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127101" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127102" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127103" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127104" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127105" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127106" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127107" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127108" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127109" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127110" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127111" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127112" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127113" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127114" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127115" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    $( "#t-F127116" ).blur( function() { autoCalculate( arr_F127117, 'F127117', 1, 999999999999 ); });
+                    
+                    //total F200317
+                    //var arr_F200317 = ['F200301','F200302','F200303','F200304','F200305','F200306','F200307','F200308','F200309','F200310','F200311','F200312','F200313','F200314','F200315','F200316'];
+                    //autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); 
+                    //$( "#t-F200301" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200302" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200303" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200304" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200305" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200306" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200307" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200308" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200309" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200310" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200311" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200312" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200313" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200314" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200315" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+                    //$( "#t-F200316" ).blur( function() { autoCalculate( arr_F200317, 'F200317', 1, 999999999999 ); });
+          }
+          
+           // Hideoffice
+          //$(".office_use").hide();
+          
+    </script>
+    <style>
+        table.table-bordered thead {
+            background-color: #f5f5f5;
+        }
+        table.table-bordered tbody tr td {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">12</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> MAKLUMAT TAMBAHAN KE ATAS IBU PEJABAT / CAWANGAN 
+                        <br/><span class="text-teal-400 font-size-sm">ADDITIONAL INFORMATION ON HEADQUATERS / BRANCHES</span></h6></td>
+                         
+                        
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 2%;">No</th>
+                        <th>Keterangan</th>
+                        <th style="width: 10%;">No Medan</th>
+                        <th class="text-center" style="width: 30%;"><i class="icon-arrow-down12"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td colspan="3">
+                            <div class="font-weight-semibold">Bagi soalan 1.2 di muka surat 3, sila nyatakan maklumat bagi Ibu Pejabat dan setiap cawangan di bawah ini</div>
+                            <span class="text-muted"><i>For Question 1.2 in page 3, please specify details for the Headquaters and each branch</i></span>
+                            <br/><br/>
+                            
+                             <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+								<span class="font-weight-semibold">Sekiranya pertubuhan tuan merupakan cawangan, sila lengkapkan soalan 12.1</span> 
+								<br/>if your establishment is a branch, please complete Question 12.1
+								<br>
+								<span class="font-weight-semibold">Sekiranya pertubuhan tuan merupakan Ibu Pejabat, sila lengkapkan Soalan 12.2 dan lampirkan senarai cawangan mengikut format yang dilampirkan</span> 
+								<br/>if your establishment is the Headquaters, please complete Question 12.2 and attach the details of your branches with complete address on a attached sheet
+						    </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center" rowspan="4">
+                            <h6 class="mb-0">12.1</h6>
+                        </td>
+                        <td>
+                            <div class="font-weight-semibold">Nama dan Alamat Ibu Pejabat</div>
+                            <span class="text-muted"><i>Name and Address of Headquaters</i></span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-121801">121801</a> <span class="text-danger"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <textarea rows="4" class="form-control" maxlength="250" id="c-121801" name="F121801" value="{{answers.F121801}}" required></textarea>
+                        </td>
+                    </tr>
+                    
+                     <tr>
+                        <td rowspan="3">
+                        
+                            <div class="font-weight-semibold">Poskod</div>
+                            <span class="text-muted"><i>Postcode</i></span>
+                        </td>
+                        <td>
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-121802">121802</a> <!--<span class="text-danger"></span>-->
+                            </div>
+                        </td>
+                        <td>
+                            <!--<input class="form-control only-number-pos" type="text" id="t-F121802" name="F121802" value="{{answers.F121802}}" maxlength="5" required>-->
+                            {{select poskodList id="s-F121802" name="F121802" class="form-control select-search" selected=answers.F121802}}
+                        </td>
+                    </tr>
+                    
+                     <tr class="office_use">
+                        <td colspan="2">
+                             <div class="col-lg-12 pb-1" align = "center">
+		                        <button type="button" class="btn alpha-info btn-labeled btn-labeled-left rounded-round text-info-800 border-info-600" style="width:78%;">
+		                           <b><i class="icon-briefcase"></i></b><span class="font-weight-semibold">KEGUNAAN PEJABAT /</span> OFFICE USE
+		                         </button>
+	                         </div>
+                        </td>
+                    </tr>
+                     <tr> 
+                        <td class="office_use">
+                            <div class="text-default font-weight-semibold">
+                                <span class="badge badge-mark border-blue mr-1"></span>
+                                <a class="ancor" id="a-121803">121803</a>
+                            </div>
+                        </td>
+                        <td class="office_use">
+                            <input class="form-control only-number-pos" type="text" id="t-F121803" name="F121803" value="{{answers.F121803}}" maxlength="3">
+                        </td>
+                    </tr>
+                    
+
+                    <div class="table-responsive">
+			<table class="table table-bordered datatable-fixed-left">
+				<thead>
+				   
+			    </thead>
+			    <tbody style="text-align:center;">
+			       
+			        
+			      
+			        
+			        
+			       
+			        
+			        
+			        
+			        
+			        
+			       
+			        
+			       
+			        
+			       
+			        
+			       
+			    </tbody>
+			</table>
+		</div>
+                    
+                    
+                    
+                  <tr>
+                      <td class="text-center">
+                            <h6 class="mb-0">12.2</h6>
+                        </td>
+                        <td>
+                           
+                      
+                            <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead align="center">
+                                    <tr>
+                			            <th>
+                			                Bil. 
+                			                <br/><span class="text-muted">No.</span>
+                		                </th>
+                			            <th >
+                			                Ibu Pejabat dan Cawangan
+                			                <br/><span class="text-muted"><i>Headquarters and Branches</i></span>
+                		                </th>
+                			            <th >
+                			                Bilangan cawangan pada tahun 2021
+                			                <br/><span class="text-muted"><i>No. of branches during 2021</i></span>
+                		                </th>
+                			            <th>
+                			                Pendapatan daripada perkhidmatan pada tahun 2021
+                			                <br/><span class="text-muted"><i>Income from services during 2021</i> </span>
+                		                </th>
+			                        </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            1.
+                                        </td>
+                                        <td >
+                                            Ibu Pejabat
+                			                <br/><span class="text-muted"><i>Headquarters</i></span>
+                                        </td>
+                                        <td ></td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127120">127120</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127120" name="F127120" value="{{answers.F127120}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2.
+                                        </td>
+                                        <td>
+                                            Johor
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127001">127001</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127001" name="F127001" value="{{answers.F127001}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127101">127101</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127101" name="F127101" value="{{answers.F127101}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                							</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            3.
+                                        </td>
+                                        <td>
+                                            Kedah
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127002">127002</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127002" name="F127002" value="{{answers.F127002}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127102">127102</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127102" name="F127102" value="{{answers.F127102}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                							</td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>
+                                            4.
+                                        </td>
+                                        <td>
+                                            Kelantan
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127003">127003</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127003" name="F127003" value="{{answers.F127003}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127103">127103</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127103" name="F127103" value="{{answers.F127103}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                							</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            5.
+                                        </td>
+                                        <td>
+                                            Melaka
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127004">127004</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127004" name="F127004" value="{{answers.F127004}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127104">127104</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127104" name="F127104" value="{{answers.F127104}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>
+                                            6.
+                                        </td>
+                                        <td>
+                                            Negeri Sembilan
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127005">127005</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127005" name="F127005" value="{{answers.F127005}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127105">127105</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127105" name="F127105" value="{{answers.F127105}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            7.
+                                        </td>
+                                        <td>
+                                            Pahang
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127006">127006</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127006" name="F127006" value="{{answers.F127006}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127106">127106</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127106" name="F127106" value="{{answers.F127106}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            8.
+                                        </td>
+                                        <td>
+                                            Pulau Pinang
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127007">127007</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127007" name="F127007" value="{{answers.F127007}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127107">127107</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127107" name="F127107" value="{{answers.F127107}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            9.
+                                        </td>
+                                        <td>
+                                            Perak
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127008">127008</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127008" name="F127008" value="{{answers.F127008}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127108">127108</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127108" name="F127108" value="{{answers.F127108}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            10.
+                                        </td>
+                                        <td>
+                                            Perlis
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127009">127009</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127009" name="F127009" value="{{answers.F127009}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127109">127109</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127109" name="F127109" value="{{answers.F127109}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            11.
+                                        </td>
+                                        <td>
+                                            Selangor
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127010">127010</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127010" name="F127010" value="{{answers.F127010}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127110">127110</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127110" name="F127110" value="{{answers.F127110}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>
+                                            12.
+                                        </td>
+                                        <td>
+                                            Terengganu
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127011">127011</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127011" name="F127011" value="{{answers.F127011}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127111">127111</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127111" name="F127111" value="{{answers.F127111}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>
+                                            13.
+                                        </td>
+                                        <td>
+                                            Sabah
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127012">127012</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127012" name="F127012" value="{{answers.F127012}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127112">127112</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127112" name="F127112" value="{{answers.F127112}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>
+                                            14.
+                                        </td>
+                                        <td>
+                                            Sarawak
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127013">127013</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127013" name="F127013" value="{{answers.F127013}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127113">127113</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127113" name="F127113" value="{{answers.F127113}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>
+                                            15.
+                                        </td>
+                                        <td>
+                                            W.P. Kuala Lumpur
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127014">127014</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127014" name="F127014" value="{{answers.F127014}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127114">127114</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127114" name="F127114" value="{{answers.F127114}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>
+                                            16.
+                                        </td>
+                                        <td>
+                                             W.P. Labuan
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127015">127015</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127015" name="F127015" value="{{answers.F127015}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127115">127115</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127115" name="F127115" value="{{answers.F127115}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    
+                                     <tr>
+                                        <td>
+                                            17.
+                                        </td>
+                                        <td>
+                                            W.P. Putrajaya
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127016">127016</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127016" name="F127016" value="{{answers.F127016}}" maxlength="3">
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127116">127116</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127116" name="F127116" value="{{answers.F127116}}" maxlength="12">
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                     </tbody>
+			    <tfoot>
+                                    <tr>
+                                        <td colspan="2" align="center">
+                                            JUMLAH
+                                            <br/><span class="text-muted"><i>TOTAL</i></span>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127017">127017</a>
+                                            </div>
+            								<input class="form-control only-number-pos" type="text" id="t-F127017" name="F127017" value="{{answers.F127017}}" maxlength="3" readonly>
+                                        </td>
+                                        <td>
+                                            <div class="text-default font-weight-semibold">
+                                                <span class="badge badge-mark border-blue mr-1"></span>
+                                                <a class="ancor" id="a-127117">127117</a>
+                                            </div>
+                                            <div class="form-group-feedback form-group-feedback-left">
+                								<input class="form-control only-number-pos" type="text" id="t-F127117" name="F127117" value="{{answers.F127117}}" maxlength="12" readonly>
+                								<div class="form-control-feedback form-control-feedback-lg">
+                									RM
+                								</div>
+                							</div>
+                						</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+                								<span class="font-weight-semibold">Nota : Jumlah nilai di medan 127117 mesti sama dengan jumlah hasil tambah di perkara 8.1, 8.2, 8.3, 8.4, 8.5, 8.6 dan 8.8 di muka surat (19-20) di bawah Soalan 8.</span> 
+                								<br/>Notes : Total value in field 127117 must be equal to the sum of items 8.1, 8.2, 8.3, 8.4, 8.5, 8.6 and 8.8 on page (19-20) under Question 8.
+                							</div>
+                                        </td>
+                                    </tr>
+                                    
+                               
+                                </tfoot>
+                            </table>
+                        </div>
+                        </td>
+                        <td colspan="2"></td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <script type="text/javascript">
+
+        function initForm(){
+
+            var trig_F010012 = "#c-F010012";
+            var arr_F010012 = ['#tx-F010013'];
+            chkDisableFRequiredT(trig_F010012, arr_F010012, arr_F010012);
+            $( trig_F010012 ).click( function() {
+                chkDisableFRequiredT(trig_F010012, arr_F010012, arr_F010012);
+            });
+
+            var arr_F010036_2 = ['#s-F011830','#c-F010037','#c-F010038','#c-F010039'];
+            chkDisableT("#r-F010036_2", "#r-F010036_1", arr_F010036_2);
+            $( "#r-F010036_1" ).click( function() {
+                chkDisableT("#r-F010036_2", "#r-F010036_1", arr_F010036_2);
+            });
+            $( "#r-F010036_2" ).click( function() {
+                chkDisableT("#r-F010036_2", "#r-F010036_1", arr_F010036_2);
+            });
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header alpha-teal header-elements-inline">
+            <table class="table">
+                <tr>
+                    <td style="width:1%"><button type="button" class="btn btn-outline bg-teal-400 border-teal-400 text-teal-800 btn-icon rounded-round"><div class="font-size-lg font-weight-bold">10</div></button></td>
+                    <td>
+                        <h6 class="text-teal-800"> NILAI STOK
+                        <br/><span class="text-teal-400 font-size-sm">VALUE OF STOCKS</span></h6>
+                        
+                        
+                        
+                    </td>
+                </tr>
+            </table>
+            <div class="header-elements header-custom"></div>
+		</div>
+        <div class="table-responsive">
+            <table class="table table-hover">
+               
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="alert alert-info alert-styled-left alert-dismissible alert-arrow-left line-height-lg">
+							    
+							    <span class="font-weight-semibold">TIDAK BERKENAAN /</span>  NOT APPLICABLE
+							    <br/> <span class="font-weight-semibold">Sila teruskan ke Soalan 11 /</span>  Please proceed to Question 11
+							    <br/> 
+						    </div>
+                        </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
